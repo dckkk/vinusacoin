@@ -14,3 +14,22 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', function(){
+	$data = array(
+		"page_title" => "Home"
+	);
+	return view('web/home', $data);
+});
+
+
+Route::prefix('admin')->group(function () {
+	Route::get('/', function(){
+		return 'admin';
+	});
+
+    Route::get('users', function () {
+        // Matches The "/admin/users" URL
+        return 'bosq';
+    });
+});
