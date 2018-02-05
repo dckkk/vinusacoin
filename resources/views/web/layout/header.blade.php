@@ -1,6 +1,6 @@
 @php
 	$menu = [
-		"home"=>"Home",
+		"/"=>"Home",
 		"#about"=>"About Us",
 		"#contact"=>"Contact Us"
 	];
@@ -21,7 +21,7 @@
 			<ul class="nav navbar-nav">
 				@foreach ($menu as $link => $menu)
 					<li @if($menu==$page_title) class="active" @endif>
-						<a href="{{$link}}">{{strtoupper($menu)}}</a>
+						<a href="{{$link}}">@lang($menu)</a>
 					</li>
 				@endforeach
 		    </ul>

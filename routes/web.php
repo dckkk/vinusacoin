@@ -11,17 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// LARAVEL DEFAULT
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/home', function(){
-	$data = array(
-		"page_title" => "Home"
-	);
-	return view('web/home', $data);
-});
+Route::get('/', 'WebController@home')->middleware('web');
 
+Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'LangController@switchLang']);
 
 Route::prefix('admin')->group(function () {
 	Route::get('/', function(){
