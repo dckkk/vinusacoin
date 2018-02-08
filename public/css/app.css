@@ -11428,12 +11428,21 @@ header {
   padding-top: 20px;
   background: #fff url("/img/header_ornament.png") no-repeat 24% 0;
   color: #a0793f;
+  background-position: 0 25%;
 }
 
 @media screen and (max-width: 768px) {
   header .logo {
     text-align: center;
   }
+
+  header .container .row .lang {
+    text-align: center !important;
+  }
+}
+
+header .navigation {
+  margin-bottom: 0;
 }
 
 header .navigation li.active > a {
@@ -11450,16 +11459,40 @@ header .navigation li > a:focus {
   color: #a0793f;
 }
 
+header .logo-icon {
+  width: 30%;
+  -webkit-animation: ld-flip-h 3s infinite;
+  animation: ld-flip-h 3s infinite;
+}
+
+header .logo-text {
+  width: 50%;
+}
+
 header .container .row .navigation {
   margin-bottom: 0;
 }
 
-header .container .row .logo-icon {
-  width: 30%;
+header .container .row .lang {
+  text-align: right;
 }
 
-header .container .row .logo-text {
-  width: 50%;
+header .container .row .lang a:hover,
+header .container .row .lang a:focus {
+  color: #a0793f;
+  text-decoration: unset;
+}
+
+header .container .row .lang a {
+  color: #636b6f;
+}
+
+header .container .row .lang b {
+  opacity: 0.5;
+}
+
+header .container .row.logo {
+  padding-bottom: 20px;
 }
 
 header .navigation {
@@ -11515,9 +11548,11 @@ header #global-nav.scrolled-nav .logo-icon {
 }
 
 footer {
-  background: #37474f url("/img/footer_ornament.png") no-repeat 24% 100%;
+  background: #37474f url("/img/footer_ornament.png") no-repeat;
   line-height: 22px;
   padding-top: 70px;
+  background-size: unset;
+  background-position: bottom right;
 }
 
 .ld.reverse {

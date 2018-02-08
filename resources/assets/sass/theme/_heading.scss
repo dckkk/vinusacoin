@@ -22,12 +22,21 @@ header {
 	padding-top:20px;
 	background: $img_header;
 	color: $header-main-color;
+	background-position: 0 25%;
 	@media screen and (max-width:768px){
 		.logo {
 			text-align:center;
 		}
+		.container {
+			.row {
+				.lang{
+					text-align:center!important;
+				}
+			}
+		}
 	}
 	.navigation{
+		margin-bottom:0;
 		li.active > a {
 			color: $header-main-color;
 		}
@@ -41,17 +50,37 @@ header {
 		}
 	}
 
+	.logo-icon{
+	    width:30%;
+	    -webkit-animation: ld-flip-h 3s infinite;
+		animation: ld-flip-h 3s infinite;
+	}
+	.logo-text{
+		width:50%;
+	}
+
 	.container{
 		.row{
 			.navigation{
 				margin-bottom:0;
 			}
-			.logo-icon{
-			    width:30%;
+			.lang{
+				text-align:right;
+				a:hover,
+				a:focus {
+		 			color: $header-main-color;
+		 			text-decoration: unset;
+				}
+				a{
+					color: $text-color;
+				}
+				b{
+					opacity: 0.5;
+				}
 			}
-			.logo-text{
-				width:50%;
-			}
+		}
+		.row.logo{
+			padding-bottom:20px;
 		}
 	}
 

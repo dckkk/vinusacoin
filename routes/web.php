@@ -18,7 +18,7 @@
 
 Route::get('/', 'WebController@home')->middleware('web');
 
-Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'LangController@switchLang']);
+Route::get('lang/{lang}', ['uses'=>'LangController@switchLang']);
 
 Route::prefix('admin')->group(function () {
 	Route::get('/', function(){
