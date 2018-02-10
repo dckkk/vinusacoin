@@ -2,6 +2,7 @@
 // Body
 $body-bg: #f5f8fa;
 $text-color: rgb(55, 71, 79);
+$footer-text-color: #fff;
 
 // Borders
 $laravel-border-color: darken($body-bg, 10%);
@@ -22,6 +23,7 @@ $header-main-color: #a0793f;
 $img_header: #fff url("/img/header_ornament.png") no-repeat 24% 0;
 // footer
 $img_footer: #37474f url("/img/footer_ornament.png") no-repeat;
+$footer-main-color: #a0793f;
 
 // Typography
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";

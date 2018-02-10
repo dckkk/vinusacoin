@@ -4,4 +4,37 @@ footer {
 	padding-top:70px;
 	background-size: unset;
 	background-position: bottom right;
+	
+	.footer-menu {
+		ul {
+			margin: 0;
+			li {
+				list-style: none !important;
+				padding-bottom: 10px;
+				
+				a {
+					color: $footer-text-color;
+					font-family: $font-family-header;
+				}
+				a:hover,
+				a:focus{
+					color: $footer-main-color;
+					text-decoration: none;
+				}
+			}	
+		}
+	}
+
+	.social-media {
+		a {
+			padding: 10px;
+			background: #fff;
+			border-radius: 10px;
+			margin-left: 5px;
+		}
+		a:hover,
+		a:focus{
+			background: $footer-main-color;
+		}
+	}
 }

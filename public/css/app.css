@@ -11555,6 +11555,38 @@ footer {
   background-position: bottom right;
 }
 
+footer .footer-menu ul {
+  margin: 0;
+}
+
+footer .footer-menu ul li {
+  list-style: none !important;
+  padding-bottom: 10px;
+}
+
+footer .footer-menu ul li a {
+  color: #fff;
+  font-family: "Muli", sans-serif;
+}
+
+footer .footer-menu ul li a:hover,
+footer .footer-menu ul li a:focus {
+  color: #a0793f;
+  text-decoration: none;
+}
+
+footer .social-media a {
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+footer .social-media a:hover,
+footer .social-media a:focus {
+  background: #a0793f;
+}
+
 .ld.reverse {
   -webkit-animation-direction: reverse;
   animation-direction: reverse;
