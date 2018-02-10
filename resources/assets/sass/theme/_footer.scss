@@ -6,6 +6,7 @@ footer {
 	background-position: bottom right;
 	
 	.footer-menu {
+		margin-bottom:70px;
 		ul {
 			margin: 0;
 			li {
@@ -23,18 +24,48 @@ footer {
 				}
 			}	
 		}
+
+		.mobile-apps{
+			a{
+				img{
+					margin:0;
+					margin-left:auto;
+				}
+			}
+		}
+		.social-media {
+			margin-bottom: 20px;
+			a {
+				padding: 10px;
+				background: #fff;
+				border-radius: 10px;
+				margin-left: 5px;
+			}
+			a:hover,
+			a:focus{
+				background: $footer-main-color;
+			}
+		}
 	}
 
-	.social-media {
-		a {
-			padding: 10px;
-			background: #fff;
-			border-radius: 10px;
-			margin-left: 5px;
+	.footer-copy{
+		hr{
+			border-color: rgba(255, 255, 255, .2);
+			z-index: 99;
+			position: relative;
+			bottom: 30px;
+			margin: 0;
 		}
-		a:hover,
-		a:focus{
-			background: $footer-main-color;
+		p.copyright{
+			color:#707d84;
+			margin:20px 0;
+
+			span{
+				z-index:100;
+				padding-right:10px;
+				position:relative;
+				background-color:$bg_footer;
+			}
 		}
 	}
 }
