@@ -7,25 +7,25 @@
 @section('content')
 <h1>About Us</h1>
 <p>
-	Vinusacoin adalah cryptocurrency, Vinusacoin misi dan visi untuk mempersatukan dunia melalui perdagangan cryptorrency, yang dapat anda percaya untuk mendapatkan keuntungan.
+	Vinusacoin is a cryptocurrency, Vinusacoin mission and vision to unite the world through cryptorrency trading, which you can trust to gain profit.
 </p>
 <p>
-	Mengapa anda harus mempercayai Vinusacoin, karena Vinusacoin mempunyai nilai tersendiri tidak seperti cryptocurrency yang lain, yang hanya menentukan nilai ketika ICO, sejak awal Vinusacoin sudah mempunyai nilai jual yang baik yang dapat dipertanggungjawabkan.
+	Why you should trust Vinusacoin, because Vinusacoin has its own value unlike the other cryptocurrency, which only determines the value when ICO, since the beginning of Vinusacoin already has good selling points that can be accounted for.
 </p>
 <p>
-	Harus kita fahami, bahwa perdagangan di cryptocurency mempunyai nilai resiko kerugian yang tinggi, namun juga mempunyai nilai keuntungan yang tinggi pula.
+	We must understand that trading in cryptocurency has a high risk of loss, but also has a high profit value as well.
 </p>
 <p>
-	Karena kenyataan ini, kami mulai mengembangkan sistem trading cryptocurency dengan tehnikal, karena cryptocurency modern yang bisa menghasilkan keuntungan lebih dengan risiko lebih kecil. Seperti kita ketahui bahwa dalam dunia trading kekuatan modal adalah yang utama, semakin modal kita maka akan semakin kita mendapatkan profit yang maksimal dan konsisten, Vinusacoin akan memberikan keuntungan yang konsisten.
+	Due to this fact, we began to develop the cryptocurency trading system technically, because modern cryptocurency can generate more profit with less risk. As we know that in the world of trading capital strength is the main, the more our capital will be the more we get the maximum profit and consistent, Vinusacoin will provide a consistent profit.
 </p>
 <p>
-	Vinusacoin mempunyai  platform lanjutan dengan tingkat keamanan yang tinggi. Platform ini mulai menyebar ke Asia Tenggara dan Eropa, sehingga memungkinkan siapapun untuk mengakses Layanan Pembiayaan, Investasi, dan Perdagangan Digital.
+	Vinusacoin has an advanced platform with a high level of security. The platform is beginning to spread to Southeast Asia and Europe, enabling anyone to access the Digital Financing, Investment and Trade Service.
 </p>
 <p>
-	Dengan bergabung dengan Vinusacoin , tidak hanya anggota yang dapat mengakses Layanan Pendanaan, Investasi, atau Perdagangan Digital kami; di kemudian hari seiring perjalanan dan perkembangan Vinusacoin akan memudahkan anda untuk betrtransasi online dalam dunia fintech.
+	By joining Vinusacoin, not only members may access our Digital Financing, Investment, or Commerce Services; in the future as Vinusacoin's journey and development will make it easier for you to betrtransasi online in the fintech world.
 </p>
 <p>
-	VINUSACOIN MEMUDAHKAN  ANDA  UNTUK MENDAPATKAN KEUNTUNGAN SEBELUM ICO DAN SESUDAH ICO DAN KAMI MEMBERIKAN RIIL BISNIS YANG MASUK AKAL SESUAI DENGAN KEMAMPUAN KAMI DALAM MENJALANKAN PERDAGANGAN CRYPTOCURENCY
+	VINUSACOIN EASILES YOU TO GET THE BENEFITS BEFORE ICO AND AFTER ICO AND WE PROVIDE REAL BUSINESS ISSUES ACCORDING TO OUR ABILITY IN TRYING CRYPTOCURENCY TRADING
 </p>
 @endsection
 
