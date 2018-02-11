@@ -61,6 +61,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('vipwallet') ? ' has-error' : '' }}">
+                            <label for="vipwallet" class="col-md-4 control-label">Wallet VIP Bitcoin</label>
+
+                            <div class="col-md-6">
+                                <input id="vipwallet" type="vipwallet" class="form-control" name="vipwallet" value="{{ old('vipwallet') }}" required>
+
+                                @if ($errors->has('vipwallet'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('vipwallet') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">

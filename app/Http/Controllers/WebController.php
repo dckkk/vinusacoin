@@ -16,7 +16,8 @@ class WebController extends Controller {
 				"menu" => [
 					"/" => "Home",
 					"/about" => "About Us",
-					"#contact" => "Contact Us"
+                    "#contact" => "Contact Us",
+					"/investment" => "INVESTMENT PLAN"
 				]
 			],
 			"footer" => []
@@ -39,12 +40,28 @@ class WebController extends Controller {
         return view('web/about', $data);
     }
 
+
+    public function investment(){
+        $data = $this->data;
+        $data['page_title'] = "Investment Plan";
+        $data['header']['page_title'] = $data['page_title'];
+        $data['footer']['page_title'] = $data['page_title'];
+        return view('web/investment', $data);
+    }
+
     public function login(){
-    	$data = $this->data;
+        $data = $this->data;
         $data['page_title'] = "Login";
         $data['header']['page_title'] = $data['page_title'];
         $data['footer']['page_title'] = $data['page_title'];
         return view('web/login', $data);
     }
 
+    public function register(){
+        $data = $this->data;
+        $data['page_title'] = "Register";
+        $data['header']['page_title'] = $data['page_title'];
+        $data['footer']['page_title'] = $data['page_title'];
+        return view('web/register', $data);
+    }
 }

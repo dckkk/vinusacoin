@@ -16,9 +16,11 @@
 //     return view('welcome');
 // });
 
+Auth::routes();
 Route::get('/', 'WebController@home')->middleware('web');
 Route::get('/about', 'WebController@about')->middleware('web');
-Route::get('/login', 'WebController@login')->middleware('web');
+Route::get('/investment', 'WebController@investment')->middleware('web');
+// Route::get('/login', 'WebController@login')->middleware('web');
 
 Route::get('lang/{lang}', ['uses'=>'LangController@switchLang']);
 
@@ -32,3 +34,5 @@ Route::prefix('admin')->group(function () {
         return 'bosq';
     });
 });
+
+Route::get('/home', 'HomeController@index')->name('home');
