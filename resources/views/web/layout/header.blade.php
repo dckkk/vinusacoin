@@ -28,7 +28,7 @@
 					</li>
 				@endforeach
 		    </ul>
-			<a href="#" class="btn btn-default">
+			<a href="/login" class="btn btn-default">
 				@lang('create account')
 			</a>
 		</div>

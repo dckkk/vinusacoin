@@ -15,7 +15,7 @@ class WebController extends Controller {
 				"logo_text" => "/img/logo-text.png",
 				"menu" => [
 					"/" => "Home",
-					"#about" => "About Us",
+					"/about" => "About Us",
 					"#contact" => "Contact Us"
 				]
 			],
@@ -29,6 +29,22 @@ class WebController extends Controller {
         $data['header']['page_title'] = $data['page_title'];
         $data['footer']['page_title'] = $data['page_title'];
         return view('web/home', $data);
+    }
+
+    public function about() {
+    	$data = $this->data;
+        $data['page_title'] = "About Us";
+        $data['header']['page_title'] = $data['page_title'];
+        $data['footer']['page_title'] = $data['page_title'];
+        return view('web/about', $data);
+    }
+
+    public function login(){
+    	$data = $this->data;
+        $data['page_title'] = "Login";
+        $data['header']['page_title'] = $data['page_title'];
+        $data['footer']['page_title'] = $data['page_title'];
+        return view('web/login', $data);
     }
 
 }

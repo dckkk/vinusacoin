@@ -17601,3 +17601,187 @@ footer .footer-copy p.copyright span {
   padding-right: 0;
 }
 
+.login .well {
+  margin: 20px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 60px 0 35px 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#7579ff), to(#00b276));
+  background: linear-gradient(top, #7579ff, #00b276);
+  color: #fff;
+}
+
+.login .well .logo {
+  margin-bottom: 20px;
+}
+
+.login .well input.form-control {
+  background: unset;
+  border: 0;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  border-bottom: 3px solid #fff;
+  padding: 0;
+  color: #fff;
+  padding: 8px 5px 15px 5px;
+  font-weight: lighter;
+  margin-bottom: 0;
+  line-height: 20px;
+  height: auto;
+  border-radius: 0 0 5px 0;
+  -webkit-transition: ease-in .2s;
+  transition: ease-in .2s;
+}
+
+.login .well input.form-control:hover,
+.login .well input.form-control:focus {
+  padding-left: 15px;
+}
+
+.login .well .form-group .form-label,
+.login .well .form-group .input-wrapper {
+  float: left;
+  position: relative;
+}
+
+.login .well .form-group .form-label {
+  width: 10%;
+  text-align: center;
+  padding: 11.5px 0;
+  background: #fff;
+  color: #b2965e;
+}
+
+.login .well .form-group .input-wrapper {
+  width: 89%;
+}
+
+.login .well .form-group .checkbox .input-checkbox100 {
+  display: none;
+}
+
+.login .well .form-group .checkbox .input-checkbox100:checked + label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+.login .well .form-group .checkbox .label-text100 {
+  margin-left: 10px;
+  position: relative;
+  bottom: 6px;
+}
+
+.login .well .form-group .checkbox .label-checkbox100 {
+  cursor: pointer;
+  position: relative;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  background: #fcfff4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fcfff4), color-stop(40%, #dfe5d7), to(#b3bead));
+  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+}
+
+.login .well .form-group .checkbox .label-checkbox100:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  background: transparent;
+  top: 7px;
+  left: 5px;
+  border: 3px solid #333;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.login .well .form-group .checkbox .label-checkbox100:hover::after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  opacity: 0.5;
+}
+
+.login .well .form-group .btn-login {
+  padding: 10px 41px;
+  font-weight: 700;
+  color: #222;
+  border-radius: 25px;
+  -webkit-transition: ease-in 0.4s;
+  transition: ease-in 0.4s;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.login .well .form-group .btn-login:hover,
+.login .well .form-group .btn-login:focus {
+  background: -webkit-gradient(linear, left bottom, left top, from(#7579ff), to(#b224ef));
+  background: linear-gradient(bottom, #7579ff, #b224ef);
+  -webkit-transition: ease-in 0.4s;
+  transition: ease-in 0.4s;
+}
+
+.login .well .bottom-link {
+  margin-top: 70px;
+}
+
+.login .well .bottom-link a {
+  color: #e5e5e5;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.login .well .bottom-link a:hover,
+.login .well .bottom-link a:focus {
+  text-decoration: none;
+  font-weight: 800;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #eee !important;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #eee !important;
+  opacity: 1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #eee !important;
+  opacity: 1;
+  /* Firefox */
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #eee !important;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: red;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: red;
+}
+
