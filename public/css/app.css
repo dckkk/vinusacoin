@@ -17601,6 +17601,10 @@ footer .footer-copy p.copyright span {
   padding-right: 0;
 }
 
+.font-18 {
+  font-size: 18px;
+}
+
 .login .well {
   margin: 20px 0;
   border-radius: 10px;
