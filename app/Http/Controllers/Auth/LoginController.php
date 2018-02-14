@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\WebController;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -19,6 +20,22 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
+
+    /**
+     * Show the application's login form.
+     *
+     * @return \Illuminate\Http\Response
+     *
+     * changelog : buat nambah parameter di view, function dari AuthenticatesUsers di tiban yak
+     *
+     */
+    public function showLoginForm() {
+        $dataobj = new WebController();
+        $data =  $dataobj->data;
+        $data['page_title'] = 'Login';
+        return view('auth.login', $data);
+    }
+
 
     /**
      * Where to redirect users after login.
