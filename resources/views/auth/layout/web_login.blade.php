@@ -4,20 +4,18 @@
 	<meta charset="UTF-8">
 	<title>VINUSA COIN - @yield('page_title')</title>
 	<link rel="shortcut icon" href="{{$header['logo']}}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 	{{-- high level css --}}
-	@component('web/layout/css')
+	@component('auth/layout/css')
 	@endcomponent
 	{{-- low level css--}}
 	@yield('css')
 	{{-- highlevel javascript --}}
-	@component('web/layout/javascript')
+	@component('auth/layout/javascript')
 	@endcomponent
 
 </head>
-<body>
-	{{-- @component('web/layout/header', $header)
-	@endcomponent --}}
-	
+<body>	
 	<div class="wrapper login">
 		<div class="col-xs-12 col-sm-8 col-sm-push-1 col-md-4 col-md-push-4">
 			<div class="well animated bounceInDown">
@@ -35,14 +33,6 @@
 			</div>
 		</div>
 	</div>
-
-	{{-- <div class="container">
-		@yield('content')
-	</div> --}}
-	
-	{{-- @component('web/layout/footer', $footer)
-	@endcomponent --}}
-	{{-- lowlevel script script --}}
 	@yield('javascript')
 </body>
 </html>

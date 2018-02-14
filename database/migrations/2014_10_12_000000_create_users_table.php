@@ -18,8 +18,12 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('vip_wallet');
+            $table->string('access_key');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->unique('email', 'users_email_uniq');
         });
     }
 

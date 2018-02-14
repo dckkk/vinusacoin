@@ -65,7 +65,7 @@
                             <label for="vipwallet" class="col-md-4 control-label">Wallet VIP Bitcoin</label>
 
                             <div class="col-md-6">
-                                <input id="vipwallet" type="vipwallet" class="form-control" name="vipwallet" value="{{ old('vipwallet') }}" required>
+                                <input id="vip_wallet" type="text" class="form-control" name="vip_wallet" value="{{ old('vipwallet') }}" required>
 
                                 @if ($errors->has('vipwallet'))
                                     <span class="help-block">
