@@ -1,0 +1,23 @@
+{
+  "name": "vinusacoin",
+  "description": "",
+  "main": "",
+  "authors": [
+    "ridhozhr10 <azharridho42@gmail.com>",
+    "dckkk <dickyparatams@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dckkk/vinusacoin",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "^3.5.2"
+  }
+}

@@ -2,7 +2,7 @@
 @section('page_title', $page_title)
 
 @section('css')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link rel="stylesheet" href="{{ asset('bower_component/animate.css/animate.min.css') }}">
 @endsection
 
 @section('content')
