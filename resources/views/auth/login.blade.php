@@ -2,7 +2,6 @@
 @section('page_title', $page_title)
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/libs/animate.css') }}">
 @endsection
 
 @section('content')

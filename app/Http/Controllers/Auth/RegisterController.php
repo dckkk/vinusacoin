@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+use App\Http\Controllers\WebController;
+
 class RegisterController extends Controller
 {
     /*
@@ -21,6 +23,14 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
+    public function showRegistrationForm()
+    {
+        $dataobj = new WebController();
+        $data =  $dataobj->data;
+        $data['page_title'] = 'Register';
+        return view('auth.register',$data);
+    }
+
 
     /**
      * Where to redirect users after registration.

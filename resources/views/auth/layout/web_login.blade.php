@@ -6,14 +6,12 @@
 	<link rel="shortcut icon" href="{{$header['logo']}}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 	{{-- high level css --}}
-	@component('auth/layout/css')
-	@endcomponent
+	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/libs/animate.css') }}">
 	{{-- low level css--}}
 	@yield('css')
 	{{-- highlevel javascript --}}
-	@component('auth/layout/javascript')
-	@endcomponent
-
+	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 </head>
 <body>	
 	<div class="wrapper login">
