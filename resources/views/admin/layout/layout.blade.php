@@ -8,11 +8,11 @@
 		<title>AdminLTE 2 | @yield('page_title')</title>
 
 		{{-- main style --}}
-    {{-- adminLTE including --}}
-    {{-- bootstrap --}}
-    {{-- main css adminLTE --}}
-    {{-- fontawesome --}}
-    {{-- ionicons --}}
+		{{-- adminLTE including --}}
+		{{-- bootstrap --}}
+		{{-- main css adminLTE --}}
+		{{-- fontawesome --}}
+		{{-- ionicons --}}
 		<link rel="stylesheet" href="{{ asset('css/AdminLTE.css') }}">
 
 		@yield('css')

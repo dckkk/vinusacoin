@@ -23,7 +23,6 @@ mix
 .js([
 	'resources/assets/adminLTE/js/demo.js',
 	'resources/assets/adminLTE/js/pages/dashboard.js'
-
 ], 'public/js/admin/dashboard.js')
 
 // another resource
