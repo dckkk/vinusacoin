@@ -14819,7 +14819,7 @@ h6 {
 
 header {
   padding-top: 20px;
-  background: #fff url("/img/header_ornament.png") no-repeat 24% 0;
+  background: #fff url("/images/header_ornament.png") no-repeat 24% 0;
   color: #a0793f;
   background-position: 0 25%;
 }
@@ -14941,7 +14941,7 @@ header #global-nav.scrolled-nav .logo-icon {
 }
 
 footer {
-  background: #37474f url("/img/footer_ornament1.png") no-repeat;
+  background: #37474f url("/images/footer_ornament1.png") no-repeat;
   line-height: 22px;
   padding-top: 70px;
   background-size: unset;
@@ -21003,8 +21003,8 @@ footer .footer-copy p.copyright span {
   border-radius: 10px;
   overflow: hidden;
   padding: 60px 0 35px 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#7579ff), to(#00b276));
-  background: linear-gradient(top, #7579ff, #00b276);
+  background: -webkit-gradient(linear, left bottom, left top, from(#7579ff), to(#00b276));
+  background: linear-gradient(to top, #7579ff, #00b276);
   color: #fff;
 }
 
@@ -21020,7 +21020,7 @@ footer .footer-copy p.copyright span {
   border-bottom: 3px solid #fff;
   padding: 0;
   color: #fff;
-  padding: 8px 5px 15px 5px;
+  padding: 8px 5px 14px 5px;
   font-weight: lighter;
   margin-bottom: 0;
   line-height: 20px;
@@ -21080,8 +21080,8 @@ footer .footer-copy p.copyright span {
   -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
   background: #fcfff4;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fcfff4), color-stop(40%, #dfe5d7), to(#b3bead));
-  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#fcfff4), color-stop(40%, #dfe5d7), to(#b3bead));
+  background: linear-gradient(to top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
 }
 
@@ -21122,8 +21122,8 @@ footer .footer-copy p.copyright span {
 
 .login .well .form-group .btn-login:hover,
 .login .well .form-group .btn-login:focus {
-  background: -webkit-gradient(linear, left bottom, left top, from(#7579ff), to(#b224ef));
-  background: linear-gradient(bottom, #7579ff, #b224ef);
+  background: -webkit-gradient(linear, left top, left bottom, from(#7579ff), to(#b224ef));
+  background: linear-gradient(to bottom, #7579ff, #b224ef);
   -webkit-transition: ease-in 0.4s;
   transition: ease-in 0.4s;
 }

@@ -15784,62 +15784,62 @@ a:focus {
 }
 
 .bg-teal-gradient {
-  background: #39CCCC;
-  background: -o-linear-gradient(#7adddd, #39CCCC) !important;
+  background: #39CCCC !important;
+  background: -moz-linear-gradient(center bottom, #39CCCC 0%, #7adddd 100%) !important;
   color: #fff;
 }
 
 .bg-light-blue-gradient {
-  background: #3c8dbc;
-  background: -o-linear-gradient(#67a8ce, #3c8dbc) !important;
+  background: #3c8dbc !important;
+  background: -moz-linear-gradient(center bottom, #3c8dbc 0%, #67a8ce 100%) !important;
   color: #fff;
 }
 
 .bg-blue-gradient {
-  background: #1a1c22;
-  background: -o-linear-gradient(#292d36, #1a1c22) !important;
+  background: #1a1c22 !important;
+  background: -moz-linear-gradient(center bottom, #1a1c22 0%, #292d36 100%) !important;
   color: #fff;
 }
 
 .bg-aqua-gradient {
-  background: #00c0ef;
-  background: -o-linear-gradient(#14d1ff, #00c0ef) !important;
+  background: #00c0ef !important;
+  background: -moz-linear-gradient(center bottom, #00c0ef 0%, #14d1ff 100%) !important;
   color: #fff;
 }
 
 .bg-yellow-gradient {
-  background: #f39c12;
-  background: -o-linear-gradient(#f7bc60, #f39c12) !important;
+  background: #f39c12 !important;
+  background: -moz-linear-gradient(center bottom, #f39c12 0%, #f7bc60 100%) !important;
   color: #fff;
 }
 
 .bg-purple-gradient {
-  background: #605ca8;
-  background: -o-linear-gradient(#9491c4, #605ca8) !important;
+  background: #605ca8 !important;
+  background: -moz-linear-gradient(center bottom, #605ca8 0%, #9491c4 100%) !important;
   color: #fff;
 }
 
 .bg-green-gradient {
-  background: #00a65a;
-  background: -o-linear-gradient(#00ca6d, #00a65a) !important;
+  background: #00a65a !important;
+  background: -moz-linear-gradient(center bottom, #00a65a 0%, #00ca6d 100%) !important;
   color: #fff;
 }
 
 .bg-red-gradient {
-  background: #dd4b39;
-  background: -o-linear-gradient(#e47365, #dd4b39) !important;
+  background: #dd4b39 !important;
+  background: -moz-linear-gradient(center bottom, #dd4b39 0%, #e47365 100%) !important;
   color: #fff;
 }
 
 .bg-black-gradient {
-  background: #111;
-  background: -o-linear-gradient(#2b2a2a, #111) !important;
+  background: #111 !important;
+  background: -moz-linear-gradient(center bottom, #111 0%, #2b2a2a 100%) !important;
   color: #fff;
 }
 
 .bg-maroon-gradient {
-  background: #D81B60;
-  background: -o-linear-gradient(#e73f7c, #D81B60) !important;
+  background: #D81B60 !important;
+  background: -moz-linear-gradient(center bottom, #D81B60 0%, #e73f7c 100%) !important;
   color: #fff;
 }
 

@@ -368,52 +368,52 @@
 
 // Gradient Background colors
 .bg-teal-gradient {
-  @include gradient($teal, $teal, lighten($teal, 16%), "!important"); //!important;
+  @include gradient($teal, $teal, lighten($teal, 16%), !important); //!important;
   color: #fff;
 }
 
 .bg-light-blue-gradient {
-  @include gradient($light-blue, $light-blue, lighten($light-blue, 12%), "!important"); //!important;
+  @include gradient($light-blue, $light-blue, lighten($light-blue, 12%), !important); //!important;
   color: #fff;
 }
 
 .bg-blue-gradient {
-  @include gradient($blue, $blue, lighten($blue, 7%), "!important"); //!important;
+  @include gradient($blue, $blue, lighten($blue, 7%), !important); //!important;
   color: #fff;
 }
 
 .bg-aqua-gradient {
-  @include gradient($aqua, $aqua, lighten($aqua, 7%), "!important"); //!important;
+  @include gradient($aqua, $aqua, lighten($aqua, 7%), !important); //!important;
   color: #fff;
 }
 
 .bg-yellow-gradient {
-  @include gradient($yellow, $yellow, lighten($yellow, 16%), "!important"); //!important;
+  @include gradient($yellow, $yellow, lighten($yellow, 16%), !important); //!important;
   color: #fff;
 }
 
 .bg-purple-gradient {
-  @include gradient($purple, $purple, lighten($purple, 16%), "!important"); //!important;
+  @include gradient($purple, $purple, lighten($purple, 16%), !important); //!important;
   color: #fff;
 }
 
 .bg-green-gradient {
-  @include gradient($green, $green, lighten($green, 7%), "!important"); //!important;
+  @include gradient($green, $green, lighten($green, 7%), !important); //!important;
   color: #fff;
 }
 
 .bg-red-gradient {
-  @include gradient($red, $red, lighten($red, 10%), "!important"); //!important;
+  @include gradient($red, $red, lighten($red, 10%), !important); //!important;
   color: #fff;
 }
 
 .bg-black-gradient {
-  @include gradient($black, $black, lighten($black, 10%), "!important"); //!important;
+  @include gradient($black, $black, lighten($black, 10%), !important); //!important;
   color: #fff;
 }
 
 .bg-maroon-gradient {
-  @include gradient($maroon, $maroon, lighten($maroon, 10%), "!important"); //!important;
+  @include gradient($maroon, $maroon, lighten($maroon, 10%), !important); //!important;
   color: #fff;
 }
 
