@@ -9,7 +9,6 @@
 - > php artisan key:generate
 - > composer install
 - > php artisan migrate
-- > npm run (prod/dev)
 - > php artisan serve
 
 ## Development front end

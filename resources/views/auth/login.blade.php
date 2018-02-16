@@ -17,9 +17,9 @@
                         <strong>Error !</strong> {{ $errors->first('email') }}
                     </div>
                 @elseif($errors->has('password'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('password') }}</strong>
-                    </span>
+                    <div class="alert alert-danger">
+                        <strong>Error !</strong> {{ $errors->first('password') }}
+                    </div>
                 @endif
                 <div class="col-sm-12">
                     <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">

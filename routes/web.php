@@ -16,22 +16,16 @@
 //     return view('welcome');
 // });
 
-Auth::routes();
-Route::get('/', 'WebController@home')->middleware('web');
-Route::get('/about', 'WebController@about')->middleware('web');
-Route::get('/investment', 'WebController@investment')->middleware('web');
-
+// setup lang
 Route::get('lang/{lang}', ['uses'=>'LangController@switchLang']);
 
-Route::prefix('admin')->group(function () {
-	Route::get('/', function(){
-		return 'admin';
-	});
-
-    Route::get('users', function () {
-        // Matches The "/admin/users" URL
-        return 'bosq';
-    });
+Route::middleware(['web', 'auth'])->group(function () {
+	Route::get('/home', 'HomeController@index')->name('home');
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware(['web'])->group(function () {
+	Auth::routes();
+	Route::get('/', 'WebController@home');
+	Route::get('/about', 'WebController@about');
+	Route::get('/investment', 'WebController@investment');
+});

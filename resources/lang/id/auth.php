@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Sesi anda tidak sesuai',
+    'failed' => 'Email / Password salah',
     'throttle' => 'Terlalu banyak kesalahan login. Coba lagi dalam :seconds detik.',
 
 ];
