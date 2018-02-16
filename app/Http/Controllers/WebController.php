@@ -11,8 +11,8 @@ class WebController extends Controller {
 	public function __construct(){
 		$this->data = [
 			"header" => [
-				"logo" => "/img/logo.png",
-				"logo_text" => "/img/logo-text.png",
+				"logo" => "/images/logo.png",
+				"logo_text" => "/images/logo-text.png",
 				"menu" => [
 					"/" => "Home",
 					"/about" => "About Us",

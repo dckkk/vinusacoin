@@ -29,3 +29,8 @@ Route::middleware(['web'])->group(function () {
 	Route::get('/about', 'WebController@about');
 	Route::get('/investment', 'WebController@investment');
 });
+
+
+Route::get('/adminLTE', function(){
+	return view('admin/dashboard', ["page_title" => "test"]);
+});

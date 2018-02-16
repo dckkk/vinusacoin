@@ -28,18 +28,18 @@
 			<div class="col-sm-12 col-md-3">
 				<div class="row text-right social-media">
 					<div class="col xs 12">
-						<a href="#"><img src="/img/icon/facebook.svg" alt="facebook"></a>
-						<a href="#"><img src="/img/icon/instagram.svg" alt="instagram"></a>
-						<a href="#"><img src="/img/icon/twitter.svg" alt="twitter"></a>
-						<a href="#"><img src="/img/icon/youtube.svg" alt="youtube"></a>
+						<a href="#"><img src="/images/icon/facebook.svg" alt="facebook"></a>
+						<a href="#"><img src="/images/icon/instagram.svg" alt="instagram"></a>
+						<a href="#"><img src="/images/icon/twitter.svg" alt="twitter"></a>
+						<a href="#"><img src="/images/icon/youtube.svg" alt="youtube"></a>
 					</div>
 				</div>
 				<div class="row mobile-apps">
 					<div class="text-right col-xs-12 col-md-6 nopadding">
-						<a href="#"><img class="img img-responsive" src="/img/icon/download_apple.png" alt=""></a>
+						<a href="#"><img class="img img-responsive" src="/images/icon/download_apple.png" alt=""></a>
 					</div>
 					<div class="text-right col-xs-12 col-md-6 nopadding">
-						<a href="#"><img class="img img-responsive" src="/img/icon/download_google.png" alt=""></a>
+						<a href="#"><img class="img img-responsive" src="/images/icon/download_google.png" alt=""></a>
 					</div>
 				</div>
 			</div>
