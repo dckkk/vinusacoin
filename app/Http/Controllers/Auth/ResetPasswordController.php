@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 use App\Http\Controllers\WebController;
@@ -21,38 +22,15 @@ class ResetPasswordController extends Controller
 
     use ResetsPasswords;
 
-    public function showResetForm(Request $request, $token = null) {
-        return view('auth.passwords.reset')->with(
-            ['token' => $token, 'email' => $request->email ]
-        );
+    public function showResetForm(Request $request, $token = null)
+    {
+        $dataobj = new WebController();
+        $data =  $dataobj->data;
+        $data['page_title'] = 'Reset Password';
+        $data['token'] = $token;
+        $data['email'] = $request->email;
+        return view('auth.passwords.reset', $data);
     }
-
-    /**
-     * Reset the given user's password.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function reset(Request $request) {
-        $this->validate($request, $this->rules(), $this->validationErrorMessages());
-
-        // Here we will attempt to reset the user's password. If it is successful we
-        // will update the password on an actual user model and persist it to the
-        // database. Otherwise we will parse the error and return the response.
-        $response = $this->broker()->reset(
-            $this->credentials($request), function ($user, $password) {
-                $this->resetPassword($user, $password);
-            }
-        );
-
-        // If the password was successfully reset, we will redirect the user back to
-        // the application's home authenticated view. If there is an error we can
-        // redirect them back to where they came from with their error message.
-        return $response == Password::PASSWORD_RESET
-                    ? $this->sendResetResponse($response)
-                    : $this->sendResetFailedResponse($request, $response);
-    }
-
     /**
      * Where to redirect users after resetting their password.
      *
