@@ -11,5 +11,9 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix
+.js('resources/assets/js/app.js', 'public/js')
+.sass('resources/assets/sass/app.scss', 'public/css')
+
+// another resource
+.styles('node_modules/animate.css/animate.css','public/css/libs/animate.css')
