@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App;
 use App\Http\Controllers\Controller;
+use App\Coin;
 
 class WebController extends Controller {
 	public $data;
@@ -20,7 +21,14 @@ class WebController extends Controller {
 					"/investment" => "Investment Plan"
 				]
 			],
-			"footer" => []
+			"footer" => [
+                "menu" => [
+                    "/" => "Home",
+                    "/about" => "About Us",
+                    "#contact" => "Contact Us",
+                    "/investment" => "Investment Plan"
+                ],
+            ]
 		];
 	}
 
@@ -29,10 +37,14 @@ class WebController extends Controller {
     }
 
     public function home() {
+        // get data coin
+        $coin = Coin::all();
+
     	$data = $this->data;
         $data['page_title'] = "Home";
         $data['header']['page_title'] = $data['page_title'];
         $data['footer']['page_title'] = $data['page_title'];
+        $data['coin'] = $coin;
         return view('web/home', $data);
     }
 

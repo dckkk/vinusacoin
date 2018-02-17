@@ -20,7 +20,7 @@
 	</div>
 	<nav id="global-nav" class="navbar navigation">
 		<div class="container">
-			<img src="/img/logo.png" alt="logo icon" class="logo logo-icon ld">
+			<img src="/images/logo.png" alt="logo icon" class="logo logo-icon ld">
 			<ul class="nav navbar-nav">
 				@foreach ($menu as $link => $menu)
 					<li @if($menu==$page_title) class="active" @endif>
