@@ -1,13 +1,14 @@
 .login {
+	background: $login-bgpage;
 	.well {
 		margin: 20px 0;
 		border-radius: 10px;
 		overflow: hidden;
 		padding: 60px 0 35px 0;
-		background: -webkit-linear-gradient(to top, #7579ff, #00b276);
-		background: -o-linear-gradient(to top, #7579ff, #00b276);
-		background: -moz-linear-gradient(to top, #7579ff, #00b276);
-		background: linear-gradient(to top, #7579ff, #00b276);
+		background: -webkit-linear-gradient(to top, $login-color-main, $login-color-secondary);
+		background: -o-linear-gradient(to top, $login-color-main, $login-color-secondary);
+		background: -moz-linear-gradient(to top, $login-color-main, $login-color-secondary);
+		background: linear-gradient(to top, $login-color-main, $login-color-secondary);
 		color: #fff;
 
 		.logo{
@@ -46,7 +47,7 @@
 				text-align: center;
 				padding: 11.5px 0;
 				background: #fff;
-				color: #b2965e;
+				color: $login-text-color;
 			}
 			.input-wrapper {
 				width:89%
@@ -127,10 +128,10 @@
 				// border: 1px solid #fff;
 				&:hover,
 				&:focus{
-					background: -webkit-linear-gradient(to bottom, #7579ff, #b224ef);
-					background: -o-linear-gradient(to bottom, #7579ff, #b224ef);
-					background: -moz-linear-gradient(to bottom, #7579ff, #b224ef);
-					background: linear-gradient(to bottom, #7579ff, #b224ef);
+					background: -webkit-linear-gradient(to bottom, $login-button-color, $login-button-color);
+					background: -o-linear-gradient(to bottom, $login-button-color, $login-button-color);
+					background: -moz-linear-gradient(to bottom, $login-button-color, $login-button-color);
+					background: linear-gradient(to bottom, $login-button-color, $login-button-color);
 					transition: ease-in 0.4s;
 				}
 			}

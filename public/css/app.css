@@ -20998,13 +20998,17 @@ footer .footer-copy p.copyright span {
   font-size: 18px;
 }
 
+.login {
+  background: #fff url("/images/header_ornament.png") no-repeat fixed center;
+}
+
 .login .well {
   margin: 20px 0;
   border-radius: 10px;
   overflow: hidden;
   padding: 60px 0 35px 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(#7579ff), to(#00b276));
-  background: linear-gradient(to top, #7579ff, #00b276);
+  background: -webkit-gradient(linear, left bottom, left top, from(#dbb25e), to(#baa377));
+  background: linear-gradient(to top, #dbb25e, #baa377);
   color: #fff;
 }
 
@@ -21122,8 +21126,8 @@ footer .footer-copy p.copyright span {
 
 .login .well .form-group .btn-login:hover,
 .login .well .form-group .btn-login:focus {
-  background: -webkit-gradient(linear, left top, left bottom, from(#7579ff), to(#b224ef));
-  background: linear-gradient(to bottom, #7579ff, #b224ef);
+  background: -webkit-gradient(linear, left top, left bottom, from(#d2a23f), to(#d2a23f));
+  background: linear-gradient(to bottom, #d2a23f, #d2a23f);
   -webkit-transition: ease-in 0.4s;
   transition: ease-in 0.4s;
 }

@@ -13,8 +13,8 @@
 	{{-- highlevel javascript --}}
 	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 </head>
-<body>	
-	<div class="wrapper login">
+<body>
+	<div class="row login">
 		<div class="col-xs-12 col-sm-8 col-sm-push-1 col-md-4 col-md-push-4">
 			<div class="well animated bounceInDown">
 				<div class="row">
