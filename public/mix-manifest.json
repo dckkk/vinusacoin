@@ -1,9 +1,4 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/AdminLTE.css": "/css/AdminLTE.css",
-    "/css/libs/flag-icon-css.css": "/css/libs/flag-icon-css.css",
-    "/js/admin/dashboard.js": "/js/admin/dashboard.js",
-    "/js/bundleLTE.js": "/js/bundleLTE.js",
-    "/css/libs/animate.css": "/css/libs/animate.css",
     "/css/app.css": "/css/app.css"
 }

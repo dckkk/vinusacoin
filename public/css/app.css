@@ -14821,7 +14821,7 @@ header {
   padding-top: 20px;
   background: #fff url("/images/header_ornament.png") no-repeat 24% 0;
   color: #a0793f;
-  background-position: 0 25%;
+  background-position: 0 60%;
 }
 
 @media screen and (max-width: 768px) {
@@ -14974,7 +14974,7 @@ footer .footer-menu ul li a:focus {
 
 footer .footer-menu .mobile-apps a img {
   margin: 0;
-  margin-left: auto;
+  margin-left: 5px;
 }
 
 footer .footer-menu .social-media {

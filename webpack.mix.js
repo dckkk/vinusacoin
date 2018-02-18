@@ -19,6 +19,7 @@ mix
 // admin LTE
 .sass('resources/assets/adminLTE/scss/AdminLTE.scss', 'public/css')
 .js('resources/assets/adminLTE/js/app.js', 'public/js/bundleLTE.js')
+
 // contoh dashboard adminLTE (ntar mah kite bikin sendiri wkwk)
 .js([
 	'resources/assets/adminLTE/js/demo.js',
@@ -26,7 +27,5 @@ mix
 ], 'public/js/admin/dashboard.js')
 
 // another resource
-.styles('node_modules/animate.css/animate.css','public/css/libs/animate.css')
+.styles(['node_modules/animate.css/animate.min.css'],'public/css/libs/animate.css')
 .sass('node_modules/flag-icon-css/sass/flag-icon.scss', 'public/css/libs/flag-icon-css.css')
-
-
