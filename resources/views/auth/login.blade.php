@@ -24,25 +24,25 @@
                     <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
                         <label class="form-label" for="email"><span class="fa-user-o fa"></span></label>
                         <div class="input-wrapper">
-                            <input type="email" name="email" value="{{ old('email') }}" class="form-control" id="email" placeholder="Email Address">
+                            <input type="email" name="email" value="{{ old('email') }}" class="form-control" id="email" placeholder="@lang('Email Address')">
                         </div>
                     </div>
                     <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
                         <label class="form-label" for="pwd"><span class="fa fa-lock"></span></label>
                         <div class="input-wrapper">
-                            <input type="password" class="form-control" id="pwd" placeholder="Password" name="password">
+                            <input type="password" class="form-control" id="pwd" placeholder="@lang('Password')" name="password">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="text-left checkbox">
                             <input type="checkbox" id="ckbl" class="input-checkbox100" name="remember" {{ old( 'remember') ? 'checked' : '' }}>
                             <label class="label-checkbox100"></label>
-                            <label class="label-text100">Remember Me</label>
+                            <label class="label-text100">@lang('Remember Me')</label>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="text-center">
-                            <button type="submit" class="btn btn-login">Submit</button>
+                            <button type="submit" class="btn btn-login">@lang('Login')</button>
                         </div>
                     </div>
                 </div>
@@ -53,10 +53,10 @@
 
 <div class="row bottom-link">
     <div class="col-xs-12 col-sm-6 text-center">
-        <a href="{{ route('password.request') }}">Forgot password ?</a>
+        <a href="{{ route('password.request') }}">@lang('Forgot password') ?</a>
     </div>
     <div class="col-xs-12 col-sm-6 text-center">
-        <a href="{{ route('register') }}">Create an account</a>
+        <a href="{{ route('register') }}">@lang('Create an account')</a>
     </div>
 </div>
 @endsection
