@@ -4,15 +4,27 @@
 		margin: 20px 0;
 		border-radius: 10px;
 		overflow: hidden;
-		padding: 60px 0 35px 0;
+		padding: 20px 0 35px 0;
 		background: -webkit-linear-gradient(to top, $login-color-main, $login-color-secondary);
 		background: -o-linear-gradient(to top, $login-color-main, $login-color-secondary);
 		background: -moz-linear-gradient(to top, $login-color-main, $login-color-secondary);
 		background: linear-gradient(to top, $login-color-main, $login-color-secondary);
 		color: #fff;
-
-		.logo{
-			margin-bottom:20px
+		.lang b{
+			opacity: 0.5;
+		}
+		.row.top{
+			margin-bottom:20px;
+			.back a{
+				background-color: unset;
+				color: #eee;
+				
+				&:hover,
+				&:focus{
+					text-decoration: none;
+					color: $login-text-color;
+				}
+			}
 		}
 
 		input.form-control {

@@ -21006,14 +21006,29 @@ footer .footer-copy p.copyright span {
   margin: 20px 0;
   border-radius: 10px;
   overflow: hidden;
-  padding: 60px 0 35px 0;
+  padding: 20px 0 35px 0;
   background: -webkit-gradient(linear, left bottom, left top, from(#dbb25e), to(#baa377));
   background: linear-gradient(to top, #dbb25e, #baa377);
   color: #fff;
 }
 
-.login .well .logo {
+.login .well .lang b {
+  opacity: 0.5;
+}
+
+.login .well .row.top {
   margin-bottom: 20px;
+}
+
+.login .well .row.top .back a {
+  background-color: unset;
+  color: #eee;
+}
+
+.login .well .row.top .back a:hover,
+.login .well .row.top .back a:focus {
+  text-decoration: none;
+  color: #b2965e;
 }
 
 .login .well input.form-control {

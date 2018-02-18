@@ -27,5 +27,6 @@ mix
 
 // another resource
 .styles('node_modules/animate.css/animate.css','public/css/libs/animate.css')
+.sass('node_modules/flag-icon-css/sass/flag-icon.scss', 'public/css/libs/flag-icon-css.css')
 
 

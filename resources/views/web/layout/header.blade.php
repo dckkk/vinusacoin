@@ -6,15 +6,17 @@
 				<img src="{{ $logo_text }}" alt="logo text" class="logo-text">
 			</div>
 			<div class="col-md-8 col-sm-4 col-xs-12 lang">
-					@foreach (Config::get('languages') as $lang => $label)
-						@if($lang == App::getLocale())
-							<b><span class="fa fa-flag"></span> {{ $label }}</b>
-						@else
-							<a href="/lang/{{ $lang }}"><span class="fa fa-flag"></span> {{ $label }}</a>
-						@endif
-						&nbsp;&nbsp;
-					@endforeach
-				</ul>
+				@foreach (Config::get('languages') as $lang => $label)
+					@php
+						$lang_icon = ($lang=='en') ? 'gb' : $lang;
+					@endphp
+					@if($lang == App::getLocale())
+						<b><span class="flag-icon flag-icon-{{$lang_icon}}"></span> {{ $label }}</b>
+					@else
+						<a href="/lang/{{ $lang }}"><span class="flag-icon flag-icon-{{$lang_icon}}"></span> {{ $label }}</a>
+					@endif
+					&nbsp;&nbsp;
+				@endforeach
 			</div>
 		</div>
 	</div>
