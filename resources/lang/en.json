@@ -3,5 +3,21 @@
 	"About Us": "ABOUT US",
 	"Contact Us": "CONTACT US",
 	"create account": "CREATE ACCOUNT",
-	"Investment Plan": "INVESTMENT PLAN"
+	"Investment Plan": "INVESTMENT PLAN",
+
+	"Email Address": "Email Address",
+	"Password": "Password",
+	"Confirm Password": "Confirm Password",
+	"Remember Me": "Remember Me",
+	"Your Name": "Your Name",
+	"VIP Wallet ID": "VIP Wallet ID",
+	"Already have account": "Already have account",
+	"Forgot password": "Forgot Password",
+	"Create an account": "Create an account",
+	"Login": "Login",
+	"Sign in Now": "Sign in Now",
+	"Submit": "Submit",
+	"Register": "Register",
+	"Send Link": "Send Link",
+	"info reset": "Reset Link will be sent to your email address "
 }

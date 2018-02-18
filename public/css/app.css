@@ -14821,7 +14821,7 @@ header {
   padding-top: 20px;
   background: #fff url("/images/header_ornament.png") no-repeat 24% 0;
   color: #a0793f;
-  background-position: 0 25%;
+  background-position: 0 60%;
 }
 
 @media screen and (max-width: 768px) {
@@ -14974,7 +14974,7 @@ footer .footer-menu ul li a:focus {
 
 footer .footer-menu .mobile-apps a img {
   margin: 0;
-  margin-left: auto;
+  margin-left: 5px;
 }
 
 footer .footer-menu .social-media {
@@ -20998,18 +20998,37 @@ footer .footer-copy p.copyright span {
   font-size: 18px;
 }
 
+.login {
+  background: #fff url("/images/header_ornament.png") no-repeat fixed center;
+}
+
 .login .well {
   margin: 20px 0;
   border-radius: 10px;
   overflow: hidden;
-  padding: 60px 0 35px 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(#7579ff), to(#00b276));
-  background: linear-gradient(to top, #7579ff, #00b276);
+  padding: 20px 0 35px 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#dbb25e), to(#baa377));
+  background: linear-gradient(to top, #dbb25e, #baa377);
   color: #fff;
 }
 
-.login .well .logo {
+.login .well .lang b {
+  opacity: 0.5;
+}
+
+.login .well .row.top {
   margin-bottom: 20px;
+}
+
+.login .well .row.top .back a {
+  background-color: unset;
+  color: #eee;
+}
+
+.login .well .row.top .back a:hover,
+.login .well .row.top .back a:focus {
+  text-decoration: none;
+  color: #b2965e;
 }
 
 .login .well input.form-control {
@@ -21122,8 +21141,8 @@ footer .footer-copy p.copyright span {
 
 .login .well .form-group .btn-login:hover,
 .login .well .form-group .btn-login:focus {
-  background: -webkit-gradient(linear, left top, left bottom, from(#7579ff), to(#b224ef));
-  background: linear-gradient(to bottom, #7579ff, #b224ef);
+  background: -webkit-gradient(linear, left top, left bottom, from(#d2a23f), to(#d2a23f));
+  background: linear-gradient(to bottom, #d2a23f, #d2a23f);
   -webkit-transition: ease-in 0.4s;
   transition: ease-in 0.4s;
 }

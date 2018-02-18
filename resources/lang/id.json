@@ -3,5 +3,21 @@
 	"About Us": "TENTANG KAMI",
 	"Contact Us": "HUBUNGI KAMI",
 	"create account": "BUAT AKUN",
-	"Investment Plan": "RENCANA INVESTASI"
+	"Investment Plan": "RENCANA INVESTASI",
+	
+	"Email Address": "Alamat Email",
+	"Password": "Password",
+	"Confirm Password": "Konfirmasi Password",
+	"Remember Me": "Ingat Saya",
+	"Your Name": "Nama Anda",
+	"VIP Wallet ID": "ID VIP Wallet",
+	"Already have account": "Sudah Punya Akun",
+	"Forgot password": "Lupa Password",
+	"Create an account": "Buat Akun",
+	"Login": "Masuk",
+	"Sign in Now": "Masuk Sekarang",
+	"Submit": "Kirim",
+	"Register": "Daftar",
+	"Send Link": "Kirim Link",
+	"info reset": "Link ganti password akan dikirimkan ke email anda"
 }
