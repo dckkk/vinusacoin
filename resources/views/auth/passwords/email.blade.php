@@ -12,16 +12,19 @@
             <form class="form-horizontal" method="POST" action="{{ route('password.email') }}">
                 {{ csrf_field() }}
                 @if(session('status'))
-                    <div class="alert alert-success">
+                    <div class="alert alert-success fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         {{ session('status') }}
                     </div>
                 @elseif($errors->has('email'))
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>Error !</strong> {{ $errors->first('email') }}
                             {{ session('status') }}
                     </div>
                 @else
-                    <div class="alert alert-info">
+                    <div class="alert alert-info fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>info !</strong><br>@lang('info reset')
                     </div>
                 @endif

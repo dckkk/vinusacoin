@@ -12,11 +12,13 @@
             <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
                 @if($errors->has('email'))
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>Error !</strong> {{ $errors->first('email') }}
                     </div>
                 @elseif($errors->has('password'))
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>Error !</strong> {{ $errors->first('password') }}
                     </div>
                 @endif

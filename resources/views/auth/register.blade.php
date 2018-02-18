@@ -12,19 +12,23 @@
             <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                 {{ csrf_field() }}
                 @if($errors->has('name'))
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>Error !</strong> {{ $errors->first('name') }}
                     </div>
                 @elseif($errors->has('email'))
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>Error !</strong> {{ $errors->first('email') }}
                     </div>
                 @elseif($errors->has('password'))
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>Error !</strong> {{ $errors->first('password') }}
                     </div>
                 @elseif($errors->has('vip_wallet'))
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>Error !</strong> {{ $errors->first('vip_wallet') }}
                     </div>
                 @endif

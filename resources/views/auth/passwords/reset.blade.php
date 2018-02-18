@@ -13,15 +13,18 @@
                 {{ csrf_field() }}
                 <input type="hidden" name="token" value="{{ $token }}">
                 @if($errors->has('email'))
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>Error !</strong> {{ $errors->first('email') }}
                     </div>
                 @elseif($errors->has('password'))
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>Error !</strong> {{ $errors->first('password') }}
                     </div>
                 @elseif ($errors->has('password_confirmation'))
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>Error !</strong> {{ $errors->first('password_confirmation') }}
                     </div>
                 @endif
