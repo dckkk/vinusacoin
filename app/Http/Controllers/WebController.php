@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App;
 use App\Http\Controllers\Controller;
 use App\Coin;
-use Illuminate\Support\Facades\DB;
+use App\Paket;
 
 class WebController extends Controller {
 	public $data;
@@ -59,10 +59,14 @@ class WebController extends Controller {
 
 
     public function investment(){
+        // get data investment plan
+        $plan = Paket::all();
+
         $data = $this->data;
         $data['page_title'] = "Investment Plan";
         $data['header']['page_title'] = $data['page_title'];
         $data['footer']['page_title'] = $data['page_title'];
+        $data['plan'] = $plan; 
         return view('web/investment', $data);
     }
 }
