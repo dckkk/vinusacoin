@@ -30,7 +30,7 @@
 					</li>
 				@endforeach
 		    </ul>
-			<a href="/login" class="btn btn-default">
+			<a href="/register" class="btn btn-default">
 				@lang('create account')
 			</a>
 		</div>

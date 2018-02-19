@@ -11,6 +11,31 @@
 	Trade & Invest in Stocks, Currencies, Indices and Commodities (CFDs). Investing in the world's most popular financial markets has never been easier.
 </p>
 
+<div class="table-responsive">
+	<table class="table table-bordered table-striped text-center">
+		<tr>
+			<th>No.</th>
+			<th>Plan Name</th>
+			<th>Terms</th>
+			<th>Monthly Return Guaranteed</th>
+			<th>Min. Spend</th>
+			<th>Max. Spend</th>
+			<th>Action</th>
+		</tr>
+		@foreach($plan as $key => $plans)
+		<tr>
+			<td>{{ $plans->id }}</td>
+			<td>{{ $plans->name }}</td>
+			<td>{{ $plans->contract }} Bulan</td>
+			<td>{{ $plans->reward }}%</td>
+			<td>{{ $plans->min_deposit }}</td>
+			<td>{{ $plans->max_deposit }}</td>
+			<td><button href="/register" class="btn btn-default">Register</button></td>
+		</tr>
+		@endforeach
+	</table>
+</div>
+
 @endsection
 
 @section('javascript')
