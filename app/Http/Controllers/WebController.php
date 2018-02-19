@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App;
 use App\Http\Controllers\Controller;
 use App\Coin;
+use Illuminate\Support\Facades\DB;
 
 class WebController extends Controller {
 	public $data;
@@ -38,7 +39,7 @@ class WebController extends Controller {
 
     public function home() {
         // get data coin
-        $coin = Coin::all();
+        $coin = Coin::orderBy('id', 'desc')->first();
 
     	$data = $this->data;
         $data['page_title'] = "Home";
@@ -64,20 +65,4 @@ class WebController extends Controller {
         $data['footer']['page_title'] = $data['page_title'];
         return view('web/investment', $data);
     }
-
-    // public function login(){
-    //     $data = $this->data;
-    //     $data['page_title'] = "Login";
-    //     $data['header']['page_title'] = $data['page_title'];
-    //     $data['footer']['page_title'] = $data['page_title'];
-    //     return view('web/login', $data);
-    // }
-
-    // public function register(){
-    //     $data = $this->data;
-    //     $data['page_title'] = "Register";
-    //     $data['header']['page_title'] = $data['page_title'];
-    //     $data['footer']['page_title'] = $data['page_title'];
-    //     return view('web/register', $data);
-    // }
 }
