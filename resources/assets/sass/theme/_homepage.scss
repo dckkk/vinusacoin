@@ -1,0 +1,38 @@
+.jumbotron {
+	background: #f7f4be;
+	.row.staging {
+		& > div {
+			&:not(:last-child):after{
+				content: ">";
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translate(0, -50%);
+				font-size: 2em;
+				color:$header-main-color;
+			}
+			min-height:3em;
+			h1,
+			h2,
+			h3,
+			h4{
+				color:$header-main-color;
+				margin-top:0;
+				margin-bottom:0;
+				font-weight:400;
+				small{
+					color:$header-main-color;
+				}
+			}
+			h1{
+				font-family: $font-family-sans-serif;
+				font-size:4em;
+			}
+			.fa{
+				color:$header-main-color;
+				font-size:2em;
+				margin:15px 0;
+			}
+		}
+	}
+}

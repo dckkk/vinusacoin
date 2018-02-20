@@ -20976,6 +20976,53 @@ footer .footer-copy p.copyright span {
   animation: ld-jingle 1s infinite;
 }
 
+.jumbotron {
+  background: #f7f4be;
+}
+
+.jumbotron .row.staging > div {
+  min-height: 3em;
+}
+
+.jumbotron .row.staging > div:not(:last-child):after {
+  content: ">";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  font-size: 2em;
+  color: #a0793f;
+}
+
+.jumbotron .row.staging > div h1,
+.jumbotron .row.staging > div h2,
+.jumbotron .row.staging > div h3,
+.jumbotron .row.staging > div h4 {
+  color: #a0793f;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.jumbotron .row.staging > div h1 small,
+.jumbotron .row.staging > div h2 small,
+.jumbotron .row.staging > div h3 small,
+.jumbotron .row.staging > div h4 small {
+  color: #a0793f;
+}
+
+.jumbotron .row.staging > div h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 4em;
+}
+
+.jumbotron .row.staging > div .fa {
+  color: #a0793f;
+  font-size: 2em;
+  margin: 15px 0;
+}
+
 @-webkit-keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);

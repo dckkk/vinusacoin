@@ -1,6 +1,12 @@
 {
     "/js/app.js": "/js/app.js",
+<<<<<<< HEAD
+    "/css/AdminLTE.css": "/css/AdminLTE.css",
+    "/css/libs/flag-icon-css.css": "/css/libs/flag-icon-css.css",
+=======
+>>>>>>> f3437afb061fae3f49a7e5b54ecbcd22d42d8869
     "/js/admin/dashboard.js": "/js/admin/dashboard.js",
     "/js/bundleLTE.js": "/js/bundleLTE.js",
-    "/css/libs/animate.css": "/css/libs/animate.css"
+    "/css/libs/animate.css": "/css/libs/animate.css",
+    "/css/app.css": "/css/app.css"
 }
