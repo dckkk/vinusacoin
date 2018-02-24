@@ -13,6 +13,8 @@
 	@yield('css')
 	{{-- highlevel javascript --}}
 	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer></script>
 </head>
 <body>
 	<div class="row login">

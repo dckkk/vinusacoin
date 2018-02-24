@@ -43,6 +43,9 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <div id="recaptcha"></div>
+                    </div>
+                    <div class="form-group">
                         <div class="text-center">
                             <button type="submit" class="btn btn-login">@lang('Login')</button>
                         </div>
@@ -71,5 +74,16 @@
             checkBoxes.prop("checked", !checkBoxes.prop("checked"));
         });
     });
+</script>
+<script type="text/javascript">
+var verifyCallback = function(response) {
+        alert(response);
+        return false;
+      };
+  var onloadCallback = function() {
+        grecaptcha.render('recaptcha', {
+            'sitekey' : '6LdYTUgUAAAAAOnzCbtXofPUvV03D_I1z2Im5WQ1'
+        });
+  };
 </script>
 @endsection
