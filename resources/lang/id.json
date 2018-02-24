@@ -19,5 +19,7 @@
 	"Submit": "Kirim",
 	"Register": "Daftar",
 	"Send Link": "Kirim Link",
-	"info reset": "Link ganti password akan dikirimkan ke email anda"
+	"info reset": "Link ganti password akan dikirimkan ke email anda",
+
+	"Sign Out": "Keluar"
 }

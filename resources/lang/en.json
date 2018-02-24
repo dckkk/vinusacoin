@@ -19,5 +19,7 @@
 	"Submit": "Submit",
 	"Register": "Register",
 	"Send Link": "Send Link",
-	"info reset": "Reset Link will be sent to your email address "
+	"info reset": "Reset Link will be sent to your email address ",
+
+	"Sign Out": "Sign Out"
 }
