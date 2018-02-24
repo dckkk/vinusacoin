@@ -35,7 +35,7 @@
 			<h1><small>Plan Today</small><br>Execute Anytime</h1>
 		</div>
 		<div class="col-md-8">
-			<table class="table table-hover">
+			<table class="table table-striped">
 				<thead>
 					<tr>
 						<th>Plan</th>
@@ -44,6 +44,11 @@
 					</tr>
 				</thead>
 				<tbody>
+					<tr>
+						<td>Silver</td>
+						<td>20%</td>
+						<td><a href="#" class="btn btn-default">See More</a></td>
+					</tr>
 					<tr>
 						<td>Silver</td>
 						<td>20%</td>

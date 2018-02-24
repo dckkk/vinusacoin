@@ -12,30 +12,33 @@
 			<ul class="nav navbar-nav">
 				<li class="dropdown user user-menu">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<img src="{{ $images_user2 }}" class="user-image" alt="User Image">
-						<span class="hidden-xs">Alexander Pierce</span>
+						{{-- <img src="{{ $images_user2 }}" class="user-image" alt="User Image"> --}}
+						<span class="hidden-xs">{{ Auth::user()->name }}</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li class="user-header">
+						{{--<li class="user-header">
 							<img src="{{ $images_user2 }}" class="img-circle" alt="User Image">
+							<span>Since {{  date("M d,Y", strtotime(Auth::user()->created_at)) }}</span>
 							<p>
 								{{ Auth::user()->name }} - Web Developer
-								<small>Since {{  date("M d,Y", strtotime(Auth::user()->created_at)) }}</small>
-							</p>
-						</li>
+								<small></small>
+							</p> 
+							<p>Since : {{ date("M d,Y", strtotime(Auth::user()->created_at)) }}</p>
+							<ul>
+								<li>My Wallet : 2000 vns</li>
+							</ul>
+						</li> --}}
 						<li class="user-body">
 							<div class="row">
-								<div class="col-xs-4 text-center">
-									<a href="#">Followers</a>
+								<div class="col-xs-6">
+									Since : <br>{{ date("M d,Y", strtotime(Auth::user()->created_at)) }}
 								</div>
-								<div class="col-xs-4 text-center">
-									<a href="#">Sales</a>
-								</div>
-								<div class="col-xs-4 text-center">
-									<a href="#">Friends</a>
+								<div class="col-xs-6">
+									Wallet : <br>2000 vsh
 								</div>
 							</div>
 						</li>
+						{{--
 						<li class="user-footer">
 							<div class="pull-left">
 								<a href="#" class="btn btn-default btn-flat">Profile</a>
@@ -47,27 +50,36 @@
 								</form>
 							</div>
 						</li>
+						--}}
 					</ul>
 				</li>
 				<li>
-					<a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+					<a href="javascript:document.getElementById('logout').submit()" title="@lang('Sign Out')">
+						@lang('Sign Out') <span class="fa fa-sign-out"></span>
+					</a>
+					<form action="{{ route('logout') }}"  id="logout" method="POST">
+						{{ csrf_field() }}
+					</form>
 				</li>
+				{{-- <li>
+					<a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+				</li> --}}
 			</ul>
 		</div>
 	</nav>
 </header>
 <aside class="main-sidebar">
 	<section class="sidebar">
-		<div class="user-panel">
+		{{-- <div class="user-panel">
 			<div class="pull-left image">
 				<img src="{{ $images_user2 }}" class="img-circle" alt="User Image">
 			</div>
 			<div class="pull-left info">
 				<p>{{ Auth::user()->name }}</p>
 			</div>
-		</div>
+		</div> --}}
 		<ul class="sidebar-menu">
-			<li class="header">MAIN NAVIGATION</li>
+			{{-- <li class="header">MAIN NAVIGATION</li> --}}
 			<li>
 				<a href="/home">
 					<i class="fa fa-dashboard"></i>
