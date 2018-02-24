@@ -18,10 +18,9 @@
 					<ul class="dropdown-menu">
 						<li class="user-header">
 							<img src="{{ $images_user2 }}" class="img-circle" alt="User Image">
-
 							<p>
-								Alexander Pierce - Web Developer
-								<small>Member since Nov. 2012</small>
+								{{ Auth::user()->name }} - Web Developer
+								<small>Since {{  date("M d,Y", strtotime(Auth::user()->created_at)) }}</small>
 							</p>
 						</li>
 						<li class="user-body">
