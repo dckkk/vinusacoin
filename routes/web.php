@@ -30,4 +30,6 @@ Route::middleware(['web'])->group(function () {
 	Route::get('/investment', 'WebController@investment');
 });
 
+// API
+Route::get('/api/ethvns', 'ApiController@getEthVns');
 

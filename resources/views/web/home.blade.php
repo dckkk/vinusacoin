@@ -6,6 +6,7 @@
 @endsection
 
 @section('content')
+	{{$idr}}
 	<div class="jumbotron">
 		<div class="row staging">
 			<div class="col-md-3 text-center hide animated">
