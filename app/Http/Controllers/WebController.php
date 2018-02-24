@@ -38,18 +38,10 @@ class WebController extends Controller {
     }
 
     public function home() {
-        // get guzzle class
-        $client = new \GuzzleHttp\Client();
-        
-        // get data coin
-        $coin = Coin::orderBy('id', 'desc')->first();
-
     	$data = $this->data;
         $data['page_title'] = "Home";
         $data['header']['page_title'] = $data['page_title'];
         $data['footer']['page_title'] = $data['page_title'];
-        $data['coin'] = $coin;
-        $data['idr'] = $res->getBody();
         return view('web/home', $data);
     }
 
