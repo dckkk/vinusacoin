@@ -38,10 +38,14 @@ class WebController extends Controller {
     }
 
     public function home() {
+        // get data coin
+        $coin = Coin::orderBy('id', 'desc')->first();
+
     	$data = $this->data;
         $data['page_title'] = "Home";
         $data['header']['page_title'] = $data['page_title'];
         $data['footer']['page_title'] = $data['page_title'];
+        $data['coin'] = $coin;
         return view('web/home', $data);
     }
 
