@@ -16,6 +16,7 @@
     "cross-env": "^5.0.1",
     "flag-icon-css": "^2.9.0",
     "font-awesome": "^4.7.0",
+    "highcharts": "^6.0.7",
     "ionicons-npm": "^2.0.1",
     "jquery": "^3.1.1",
     "laravel-mix": "^1.0",

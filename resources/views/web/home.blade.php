@@ -30,12 +30,16 @@
 			</div>
 		</div>
 	</div>
+	<div class="row">
+		<div id="container"></div>
+	</div>
 @endsection
 
 @section('javascript')
+<script src="{{ asset('js/page/home.js') }}"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		// navigation fixed top on scroll
+ 		// navigation fixed top on scroll
 		var scrollTop = 0;
 		$(window).scroll(function(){
 			scrollTop = $(window).scrollTop();

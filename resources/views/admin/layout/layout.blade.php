@@ -17,12 +17,12 @@
 
 		@yield('css')
 	</head>
-	<body class="hold-transition skin-blue sidebar-mini">
+	<body class="hold-transition skin-yellow-light sidebar-mini">
 		<div class="wrapper">
 			@component('admin/layout/header', $header)
 			@endcomponent
 			
-      <div class="content-wrapper">
+      		<div class="content-wrapper">
 				@yield('content')
 			</div>
 
