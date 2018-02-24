@@ -20976,15 +20976,15 @@ footer .footer-copy p.copyright span {
   animation: ld-jingle 1s infinite;
 }
 
-.jumbotron {
-  background: #f7f4be;
+.row.staging {
+  padding: 3em 0;
 }
 
-.jumbotron .row.staging > div {
+.row.staging > div {
   min-height: 3em;
 }
 
-.jumbotron .row.staging > div:not(:last-child):after {
+.row.staging > div:not(:last-child):after {
   content: ">";
   position: absolute;
   right: 0;
@@ -20995,32 +20995,57 @@ footer .footer-copy p.copyright span {
   color: #a0793f;
 }
 
-.jumbotron .row.staging > div h1,
-.jumbotron .row.staging > div h2,
-.jumbotron .row.staging > div h3,
-.jumbotron .row.staging > div h4 {
+.row.staging > div h1,
+.row.staging > div h2,
+.row.staging > div h3,
+.row.staging > div h4 {
   color: #a0793f;
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 400;
 }
 
-.jumbotron .row.staging > div h1 small,
-.jumbotron .row.staging > div h2 small,
-.jumbotron .row.staging > div h3 small,
-.jumbotron .row.staging > div h4 small {
+.row.staging > div h1 small,
+.row.staging > div h2 small,
+.row.staging > div h3 small,
+.row.staging > div h4 small {
   color: #a0793f;
 }
 
-.jumbotron .row.staging > div h1 {
+.row.staging > div h1 {
   font-family: "Roboto", sans-serif;
   font-size: 4em;
 }
 
-.jumbotron .row.staging > div .fa {
+.row.staging > div .fa {
   color: #a0793f;
   font-size: 2em;
   margin: 15px 0;
+}
+
+.row.contactus h3 {
+  margin-bottom: 2em;
+}
+
+.row.contactus form > div,
+.row.contactus form > div > div {
+  margin-bottom: 1em;
+}
+
+.row.contactus form > div .input-group-addon,
+.row.contactus form > div > div .input-group-addon {
+  color: #a0793f;
+  background: #f7f4be;
+}
+
+.row.contactus form > div input:focus,
+.row.contactus form > div textarea:focus,
+.row.contactus form > div > div input:focus,
+.row.contactus form > div > div textarea:focus {
+  border-color: #f7f4be;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(160, 121, 63, 0.6);
+  box-shadow: inset 0 1px 1px rgba(189, 170, 118, 0.6), 0 0 8px rgba(160, 121, 63, 0.6);
 }
 
 @-webkit-keyframes spin {
@@ -21034,6 +21059,10 @@ footer .footer-copy p.copyright span {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+body {
+  background: unset;
 }
 
 .nopadding {

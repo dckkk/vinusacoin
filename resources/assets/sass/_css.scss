@@ -3,6 +3,7 @@
 @import "theme/animation";
 
 @import "theme/homepage";
+@import "theme/contactus";
 
 @-moz-keyframes spin { 
 	100% { 
@@ -19,6 +20,10 @@
 		-webkit-transform: rotate(360deg); 
 		transform:rotate(360deg); 
 	} 
+}
+
+body {
+	background: unset;
 }
 
 .nopadding {

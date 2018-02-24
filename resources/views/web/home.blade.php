@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-	<div class="jumbotron">
+	<div class="row">
 		<div class="row staging">
 			<div class="col-md-3 text-center hide animated">
 				<span class="fa fa-hourglass-start"></span>
@@ -31,7 +31,27 @@
 		</div>
 	</div>
 	<div class="row">
-		<div id="container"></div>
+		<div class="col-md-4">
+			<h1><small>Plan Today</small><br>Execute Anytime</h1>
+		</div>
+		<div class="col-md-8">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Plan</th>
+						<th>Gain</th>
+						<th width="20px">&nbsp</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Silver</td>
+						<td>20%</td>
+						<td><a href="#" class="btn btn-default">See More</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 @endsection
 

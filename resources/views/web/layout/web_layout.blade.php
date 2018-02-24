@@ -17,11 +17,9 @@
 <body>
 	@component('web/layout/header', $header)
 	@endcomponent
-
-	<div class="container">
+	<div class="container">	
 		@yield('content')
 	</div>
-	
 	@component('web/layout/footer', $footer)
 	@endcomponent
 	{{-- lowlevel script script --}}

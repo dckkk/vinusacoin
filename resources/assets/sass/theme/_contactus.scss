@@ -1,0 +1,25 @@
+.row.contactus{
+	h3 {
+		margin-bottom: 2em;
+	}
+
+	form {
+		& > div,  & > div > div {
+			margin-bottom:1em;
+
+			.input-group-addon {
+				color: #a0793f;
+				background: #f7f4be;
+			}
+
+			input,textarea {
+				&:focus{
+					border-color: #f7f4be;
+					outline: 0;
+					-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(160, 121, 63, .6);
+					box-shadow: inset 0 1px 1px rgba(189, 170, 118, .6), 0 0 8px rgba(160, 121, 63, .6);
+				}
+			}
+		}
+	}
+}

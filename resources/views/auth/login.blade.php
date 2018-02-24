@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div id="recaptcha"></div>
+                        <div class="text-center" id="recaptcha"></div>
                     </div>
                     <div class="form-group">
                         <div class="text-center">

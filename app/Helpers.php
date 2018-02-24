@@ -1,5 +1,5 @@
 <?php
-namespace App;
+use App;
 
 class Helpers {
     
