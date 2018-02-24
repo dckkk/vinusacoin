@@ -4,18 +4,41 @@
 @section('content')
 	<section class="content-header">
 		<h1>
-			Dashboard
+			Investment Plan
 			<small>Control panel</small>
 		</h1>
 		<ol class="breadcrumb">
 			<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-			<li class="active">Dashboard</li>
+			<li class="active">Investment Planning</li>
 		</ol>
 	</section>
 
 	<section class="content">
 		<div class="row">
-			{{$wallet}}
+        <div class="table-responsive">
+	<table class="table table-bordered table-striped text-center">
+		<tr>
+			<th>No.</th>
+			<th>Plan Name</th>
+			<th>Terms</th>
+			<th>Monthly Return Guaranteed</th>
+			<th>Min. Spend</th>
+			<th>Max. Spend</th>
+			<th>Action</th>
+		</tr>
+		@foreach($plans as $key => $plan)
+		<tr>
+			<td>{{ $plan->id }}</td>
+			<td>{{ $plan->name }}</td>
+			<td>{{ $plan->contract }} Bulan</td>
+			<td>{{ $plan->reward }}%</td>
+			<td>{{ $plan->min_deposit }}</td>
+			<td>{{ $plan->max_deposit }}</td>
+			<td><a href="#" class="btn btn-default">Register</a></td>
+		</tr>
+		@endforeach
+	</table>
+</div>
 		</div>
 	</section>
 @endsection

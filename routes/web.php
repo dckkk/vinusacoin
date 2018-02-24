@@ -21,6 +21,7 @@ Route::get('lang/{lang}', ['uses'=>'LangController@switchLang']);
 
 Route::middleware(['web', 'auth'])->group(function () {
 	Route::get('/home', 'HomeController@index')->name('home');
+	Route::get('/client-investment', 'HomeController@invest');
 });
 
 Route::middleware(['web'])->group(function () {

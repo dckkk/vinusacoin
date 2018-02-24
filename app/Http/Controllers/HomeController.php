@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Paket;
+use App\Wallet;
+use Auth;
+
 class HomeController extends Controller
 {
     public $data;
@@ -44,6 +48,19 @@ class HomeController extends Controller
     public function index()
     {
         $data = $this->data;
+        $wallet = Wallet::where('user_id', Auth::user()->id)->first();
+        $data['wallet'] = $wallet;
+
         return view('admin/dashboard', $data);
+    }
+    
+    public function invest()
+    {
+        $data = $this->data;
+        // get invest plan
+        $plans = Paket::all();
+        $data['plans'] = $plans;
+        
+        return view('admin/plans', $data);
     }
 }

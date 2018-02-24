@@ -69,19 +69,19 @@
 		<ul class="sidebar-menu">
 			<li class="header">MAIN NAVIGATION</li>
 			<li>
-				<a href="#">
+				<a href="/home">
 					<i class="fa fa-dashboard"></i>
 					<span>Dashboard</span>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="/deposit">
 					<i class="fa fa-credit-card"></i>
 					<span>Deposit</span>
 				</a>
 			</li>
 			<li>	
-				<a href="#">
+				<a href="/client-investment">
 					<i class="fa fa-briefcase"></i>
 					<span>Investment Plan</span>
 				</a>
