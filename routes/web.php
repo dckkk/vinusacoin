@@ -27,6 +27,7 @@ Route::middleware(['web'])->group(function () {
 	Auth::routes();
 	Route::get('/', 'WebController@home');
 	Route::get('/about', 'WebController@about');
+	Route::get('/contact', 'WebController@contact');
 	Route::get('/investment', 'WebController@investment');
 });
 
