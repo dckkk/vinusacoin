@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    public $data;
     /**
      * Create a new controller instance.
      *
@@ -14,6 +15,25 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->data = [
+			"page_title" => "Dashboard",
+			"header" => [
+				"images_user2" => "/images/img/user2-160x160.jpg",
+				"images_user3" => "/images/img/user3-128x128.jpg",
+				"images_user4" => "/images/img/user4-128x128.jpg",
+				"images_user5" => "/images/img/user5-128x128.jpg",
+				"images_user6" => "/images/img/user6-128x128.jpg",
+				"images_user7" => "/images/img/user7-128x128.jpg",
+				"images_user8" => "/images/img/user8-128x128.jpg"
+			],
+			"images_user2" => "/images/img/user2-160x160.jpg",
+			"images_user3" => "/images/img/user3-128x128.jpg",
+			"images_user4" => "/images/img/user4-128x128.jpg",
+			"images_user5" => "/images/img/user5-128x128.jpg",
+			"images_user6" => "/images/img/user6-128x128.jpg",
+			"images_user7" => "/images/img/user7-128x128.jpg",
+			"images_user8" => "/images/img/user8-128x128.jpg"
+        ];
     }
 
     /**
@@ -23,6 +43,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $data = $this->data;
+        return view('admin/dashboard', $data);
     }
 }

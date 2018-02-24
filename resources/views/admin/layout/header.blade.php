@@ -61,25 +61,30 @@
 				<img src="{{ $images_user2 }}" class="img-circle" alt="User Image">
 			</div>
 			<div class="pull-left info">
-				<p>Alexander Pierce</p>
-				<a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+				<p>{{ Auth::user()->name }}</p>
 			</div>
 		</div>
 		<ul class="sidebar-menu">
 			<li class="header">MAIN NAVIGATION</li>
-			<li class="treeview">
+			<li>
 				<a href="#">
 					<i class="fa fa-dashboard"></i>
 					<span>Dashboard</span>
 				</a>
+			</li>
+			<li>
 				<a href="#">
 					<i class="fa fa-credit-card"></i>
 					<span>Deposit</span>
 				</a>
+			</li>
+			<li>	
 				<a href="#">
 					<i class="fa fa-briefcase"></i>
 					<span>Investment Plan</span>
 				</a>
+			</li>
+			<li>
 				<a href="#">
 					<i class="fa fa-question"></i>
 					<span>Support Center</span>

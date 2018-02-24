@@ -30,7 +30,7 @@
 			<td>{{ $plans->reward }}%</td>
 			<td>{{ $plans->min_deposit }}</td>
 			<td>{{ $plans->max_deposit }}</td>
-			<td><button href="/register" class="btn btn-default">Register</button></td>
+			<td><a href="/register" class="btn btn-default">Register</a></td>
 		</tr>
 		@endforeach
 	</table>
