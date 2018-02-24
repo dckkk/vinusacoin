@@ -1,11 +1,9 @@
 <?php
+use App;
 
-namespace app;
-
-class Helpers
-{
-    public function fooBar()
-    {
-        return 'it works!';
+class Helpers {
+    
+    static function fooBar(){
+        return "heelaaa Reyaa";
     }
 }

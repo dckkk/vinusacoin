@@ -7,6 +7,7 @@
 @section('content')
 	<h1>About Us</h1>
 	<p>
+		{{ Helpers::fooBar() }}
 		Vinusacoin is a cryptocurrency, Vinusacoin mission and vision to unite the world through cryptorrency trading, which you can trust to gain profit.
 	</p>
 	<p>
