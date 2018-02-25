@@ -44,16 +44,13 @@
 					</tr>
 				</thead>
 				<tbody>
+					@foreach($plans as $key => $plan)
 					<tr>
-						<td>Silver</td>
-						<td>20%</td>
-						<td><a href="#" class="btn btn-default">See More</a></td>
+						<td>{{ $plan->name }}</td>
+						<td>{{ $plan->reward }}%</td>
+						<td><a href="/investment" class="btn btn-default">See More</a></td>
 					</tr>
-					<tr>
-						<td>Silver</td>
-						<td>20%</td>
-						<td><a href="#" class="btn btn-default">See More</a></td>
-					</tr>
+					@endforeach
 				</tbody>
 			</table>
 		</div>

@@ -21,6 +21,11 @@
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>Error !</strong> {{ $errors->first('password') }}
                     </div>
+                @elseif($errors->has('g-recaptcha-response'))
+                    <div class="alert alert-danger fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Error !</strong> Please Verify the Captcha !
+                    </div>
                 @endif
                 <div class="col-sm-12">
                     <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
@@ -43,7 +48,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="text-center" id="recaptcha"></div>
+                        <div id="recaptcha"></div>
                     </div>
                     <div class="form-group">
                         <div class="text-center">
@@ -76,10 +81,6 @@
     });
 </script>
 <script type="text/javascript">
-var verifyCallback = function(response) {
-        alert(response);
-        return false;
-      };
   var onloadCallback = function() {
         grecaptcha.render('recaptcha', {
             'sitekey' : '6LdYTUgUAAAAAOnzCbtXofPUvV03D_I1z2Im5WQ1'

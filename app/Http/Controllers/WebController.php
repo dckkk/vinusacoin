@@ -41,11 +41,15 @@ class WebController extends Controller {
         // get data coin
         $coin = Coin::orderBy('id', 'desc')->first();
 
+        // get limit data plans
+        $plans = Paket::inRandomOrder()->limit(2)->get();
+
     	$data = $this->data;
         $data['page_title'] = "Home";
         $data['header']['page_title'] = $data['page_title'];
         $data['footer']['page_title'] = $data['page_title'];
         $data['coin'] = $coin;
+        $data['plans'] = $plans;
         return view('web/home', $data);
     }
 

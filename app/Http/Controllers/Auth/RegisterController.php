@@ -61,24 +61,25 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-            'vip_wallet' => 'required|string|max:255|min:6',
-        ]);
-    }
-
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\User
-     */
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-            'vip_wallet' => $data['vip_wallet'],
-            'access_key' => "acesskey",
-        ]);
-    }
+            'vipwallet' => 'required|string|max:255|min:6',
+            'g-recaptcha-response' => 'required',
+            ]);
+        }
+        
+        /**
+         * Create a new user instance after a valid registration.
+         *
+         * @param  array  $data
+         * @return \App\User
+         */
+        protected function create(array $data)
+        {
+            return User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => bcrypt($data['password']),
+                'vipwallet' => $data['vipwallet'],
+                'accesskey' => 'acesskey',
+                ]);
+            }
 }

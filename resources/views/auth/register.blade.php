@@ -26,10 +26,15 @@
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>Error !</strong> {{ $errors->first('password') }}
                     </div>
-                @elseif($errors->has('vip_wallet'))
+                @elseif($errors->has('vipwallet'))
                     <div class="alert alert-danger fade in">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Error !</strong> {{ $errors->first('vip_wallet') }}
+                        <strong>Error !</strong> {{ $errors->first('vipwallet') }}
+                    </div>
+                @elseif($errors->has('g-recaptcha-response'))
+                    <div class="alert alert-danger fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Error !</strong> Please verify the Captcha !
                     </div>
                 @endif
                 <div class="col-sm-12">
@@ -60,7 +65,7 @@
                     <div class="form-group {{ $errors->has('vipwallet') ? ' has-error' : '' }}">
                         <label class="form-label" for="vipwallet"><span class="fa-id-card-o fa"></span></label>
                         <div class="input-wrapper">
-                            <input type="vipwallet" name="vip_wallet" value="{{ old('vipwallet') }}" class="form-control" id="vipwallet" placeholder="@lang('VIP Wallet ID')">
+                            <input type="vipwallet" name="vipwallet" value="{{ old('vipwallet') }}" class="form-control" id="vipwallet" placeholder="@lang('VIP Wallet ID')">
                         </div>
                     </div>
                     <div class="fom-group">
