@@ -48,7 +48,7 @@ class HomeController extends Controller
     public function index()
     {
         $data = $this->data;
-        $wallet = Wallet::where('user_id', Auth::user()->id)->first();
+        $wallet = Wallet::where('user_email', Auth::user()->email)->first();
         $data['wallet'] = $wallet;
 
         return view('admin/dashboard', $data);

@@ -1,3 +1,6 @@
+<?php 
+	$coin = App\Wallet::where('user_email', Auth::user()->email)->first();
+?>
 <header class="main-header">
 	<a href="/home" class="logo">
 		<span class="logo-mini"><b>VNS</b></span>
@@ -25,7 +28,7 @@
 							</p> 
 							<p>Since : {{ date("M d,Y", strtotime(Auth::user()->created_at)) }}</p>
 							<ul>
-								<li>My Wallet : 2000 vns</li>
+								<li>My Wallet :  vns</li>
 							</ul>
 						</li> --}}
 						<li class="user-body">
@@ -34,7 +37,7 @@
 									Since : <br>{{ date("M d,Y", strtotime(Auth::user()->created_at)) }}
 								</div>
 								<div class="col-xs-6">
-									Wallet : <br>2000 vsh
+									Wallet : <br>@if(empty($coin->total_coin)) 0 @else {{ $coin->total_coin }} @endif VNS
 								</div>
 							</div>
 						</li>

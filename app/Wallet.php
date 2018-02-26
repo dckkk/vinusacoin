@@ -10,7 +10,7 @@ class Wallet extends Model
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['user_id', 'token', 'total_coin', 'total_eth'];
+    protected $fillable = ['user_email', 'token', 'total_coin', 'total_eth'];
 
     public function user() {
         return $this->belongsTo('App\User', 'user_id');

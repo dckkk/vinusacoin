@@ -5,7 +5,6 @@
 	<section class="content-header">
 		<h1>
 			Dashboard
-			<small>Control panel</small>
 		</h1>
 		<ol class="breadcrumb">
 			<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -14,8 +13,25 @@
 	</section>
 
 	<section class="content">
-		<div class="row">
-			{{$wallet}}
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="col-md-5">
+						<div class="box-coin">
+							<small>Saldo VNS</small>
+							<br>
+							<p class="pull-right">@if(empty($wallet->total_coin)) 0 @else {{$wallet->total_coin}} @endif VNS</p>							
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="box-coin">
+							<small>Saldo ETH</small>
+							<br>
+							<p class="pull-right">@if(empty($wallet->total_eth)) 0 @else {{$wallet->total_eth}} @endif ETH</p>							
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 @endsection
