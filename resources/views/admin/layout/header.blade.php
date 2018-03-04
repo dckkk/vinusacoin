@@ -3,7 +3,7 @@
 ?>
 <header class="main-header">
 	<a href="/home" class="logo">
-		<span class="logo-mini"><b>VNS</b></span>
+		<span class="logo-mini"><b>VNC</b></span>
 		<span class="logo-lg"><b>VINUSACOIN</b></span>
 	</a>
 	<nav class="navbar navbar-static-top" role="navigation">
@@ -37,7 +37,7 @@
 									Since : <br>{{ date("M d,Y", strtotime(Auth::user()->created_at)) }}
 								</div>
 								<div class="col-xs-6">
-									Wallet : <br>@if(empty($coin->total_coin)) 0 @else {{ $coin->total_coin }} @endif VNS
+									Wallet : <br>@if(empty($coin->total_coin)) 0 @else {{ $coin->total_coin }} @endif VNC
 								</div>
 							</div>
 						</li>

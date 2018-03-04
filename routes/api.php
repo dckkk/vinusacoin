@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::middleware('api')->group(function () {
+    Route::get('/eth_vnc', 'ApiController@getEthVnc');
+    Route::get('/vnc_eth', 'ApiController@getVncEth');
+    Route::get('/withdraw/callback', 'ApiController@withdrawCallback');
+    Route::post('/convertVncEth', 'ApiController@convertVncEth');
+    Route::post('/convertEthVnc', 'ApiController@convertEthVnc');
+});

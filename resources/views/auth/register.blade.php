@@ -65,7 +65,7 @@
                     <div class="form-group {{ $errors->has('vipwallet') ? ' has-error' : '' }}">
                         <label class="form-label" for="vipwallet"><span class="fa-id-card-o fa"></span></label>
                         <div class="input-wrapper">
-                            <input type="vipwallet" name="vipwallet" value="{{ old('vipwallet') }}" class="form-control" id="vipwallet" placeholder="@lang('VIP Wallet ID')">
+                            <input type="vipwallet" name="vipwallet" value="{{ old('vipwallet') }}" class="form-control" id="vipwallet" placeholder="@lang('Your Wallet ETH')">
                         </div>
                     </div>
                     <div class="fom-group">

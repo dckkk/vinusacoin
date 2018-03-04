@@ -4,11 +4,11 @@
 @section('content')
 	<section class="content-header">
 		<h1>
-			Dashboard
+			Deposit
 		</h1>
 		<ol class="breadcrumb">
-			<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-			<li class="active">Dashboard</li>
+			<li><a href="#"><i class="fa fa-credit-card"></i> Home</a></li>
+			<li class="active">Deposit</li>
 		</ol>
 	</section>
 
@@ -16,80 +16,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="col-md-5">
-						<div class="box-coin">
-							<small>Saldo VNC</small>
-							<br>
-							<p class="pull-right">@if(empty($wallet->total_coin)) 0 @else {{$wallet->total_coin}} @endif VNC</p>							
-						</div>
-					</div>
-					<div class="col-md-5">
-						<div class="box-coin">
-							<small>Saldo ETH</small>
-							<br>
-							<p class="pull-right">@if(empty($wallet->total_eth)) 0 @else {{$wallet->total_eth}} @endif ETH</p>							
-						</div>
-					</div>
-				</div>
-				<div class="col-md-12">
-					<div class="col-md-5">
-						<form method="POST" action="/api/convertVncEth">
-							<input type="hidden" name="email" value="{{Auth::user()->email}}">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									Convert VNC to ETH
-								</div>
-								<div class="panel-body">
-									<div class="col-md-12">
-										<div class="col-md-4">Saldo VNC: </div> 
-										<div class="col-md-8 text-right">@if(empty($wallet->total_coin)) 0 @else {{$wallet->total_coin}} @endif VNC</div>
-									</div>
-									<div class="col-md-12">
-										<div class="col-md-4">Total VNC: </div> 
-										<div class="col-md-8 text-right"><input type="number" name="total_coin" id="vnc_eth" class="form-control" onkeyup="checkVal('vnc_eth', this.value, {{$wallet->total_coin}})" onblur="checkConvert('vnc_eth', this.value)"></div>
-									</div>
-									<div class="col-md-12">
-										<div class="col-md-4">Result ETH: </div>
-										<div class="col-md-8 text-right"><input type="hidden" id="input-vnc_eth" name="total_eth"><span id="res-vnc_eth"></span>  ETH</div>
-									</div>
-									<div class="col-md-12 text-right">
-										<button type="submit" class="btn btn-primary btn-vnc_eth" disabled>
-											Convert
-										</button>
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="col-md-5">
-						<form method="POST" action="/api/convertEthVnc">
-							<input type="hidden" name="email" value="{{Auth::user()->email}}">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									Convert ETH to VNC
-								</div>
-								<div class="panel-body">
-									<div class="col-md-12">
-										<div class="col-md-4">Saldo ETH: </div> 
-										<div class="col-md-8 text-right">@if(empty($wallet->total_eth)) 0 @else {{$wallet->total_eth}} @endif ETH</div>
-									</div>
-									<div class="col-md-12">
-										<div class="col-md-4">Total ETH: </div> 
-										<div class="col-md-8 text-right"><input type="number" name="total_eth" id="eth_vnc" class="form-control" onkeyup="checkVal('eth_vnc', this.value, {{$wallet->total_eth}})" onblur="checkConvert('eth_vnc', this.value)"></div>
-									</div>
-									<div class="col-md-12">
-										<div class="col-md-4">Result VNC: </div>
-										<div class="col-md-8 text-right"> <input type="hidden" id="input-eth_vnc" name="total_coin"> <span id="res-eth_vnc"></span>  VNC</div>
-									</div>
-									<div class="col-md-12 text-right">
-										<button type="submit" class="btn btn-primary btn-eth_vnc" disabled>
-											Convert
-										</button>
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
+					
 				</div>
 			</div>
 		</div>

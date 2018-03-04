@@ -53,6 +53,15 @@ class HomeController extends Controller
 
         return view('admin/dashboard', $data);
     }
+
+    public function deposit()
+    {
+        $data = $this->data;
+        $wallet = Wallet::where('user_email', Auth::user()->email)->first();
+        $data['wallet'] = $wallet;
+
+        return view('admin/deposit', $data);
+    }
     
     public function invest()
     {
@@ -62,5 +71,10 @@ class HomeController extends Controller
         $data['plans'] = $plans;
         
         return view('admin/plans', $data);
+    }
+
+    public function tradeVnsEth()
+    {
+        return "a";
     }
 }

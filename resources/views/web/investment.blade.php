@@ -10,6 +10,8 @@
 <p class="font-18">
 	Trade & Invest in Stocks, Currencies, Indices and Commodities (CFDs). Investing in the world's most popular financial markets has never been easier.
 </p>
+<h4>Note: <strong>1 VNC = 10 USD</strong></h4>
+<i>* Return Investment 100% in the last month + 1month, for 1month company will not give the return</i>
 
 <div class="table-responsive">
 	<table class="table table-bordered table-striped text-center">
@@ -28,8 +30,8 @@
 			<td>{{ $plans->name }}</td>
 			<td>{{ $plans->contract }} Bulan</td>
 			<td>{{ $plans->reward }}%</td>
-			<td>{{ $plans->min_deposit }}</td>
-			<td>{{ $plans->max_deposit }}</td>
+			<td>{{ $plans->min_deposit }} VNC</td>
+			<td>{{ $plans->max_deposit }} VNC</td>
 			<td><a href="/register" class="btn btn-default">Register</a></td>
 		</tr>
 		@endforeach

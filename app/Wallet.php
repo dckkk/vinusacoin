@@ -13,6 +13,6 @@ class Wallet extends Model
     protected $fillable = ['user_email', 'token', 'total_coin', 'total_eth'];
 
     public function user() {
-        return $this->belongsTo('App\User', 'user_id');
+        return $this->belongsTo('App\User', 'user_email');
     }
 }
