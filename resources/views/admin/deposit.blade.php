@@ -16,7 +16,63 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#deposit" aria-controls="home" role="tab" data-toggle="tab">Deposit</a></li>
+								<li role="presentation"><a href="#withdraw" aria-controls="profile" role="tab" data-toggle="tab">Withdraw</a></li>
+							</ul>
+						</div>
+						<div class="panel-body">
+							<!-- Tab panes -->
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="deposit">
+									<form action="/api/deposit" class="form-horizontal" method="POST">
+										<input type="hidden" name="email" value="{{Auth::user()->email}}">
+										<div class="col-md-6">
+											<div class="form-group">
+												<div class="col-md-4"><label for="">Saldo VNC: </label></div> 
+												<div class="col-md-8 text-right">@if(empty($wallet->total_coin)) 0 @else {{$wallet->total_coin}} @endif VNC</div>
+											</div>
+											<div class="form-group">
+												<div class="col-md-4"><label for="vnc_eth">Total Deposit VNC: </label></div> 
+												<div class="col-md-8 text-right"><input type="text" name="total_coin" id="vnc_eth" class="form-control" onkeyup="checkVal(event, 'vnc_eth')" onblur="checkConvert('vnc_eth', this.value)"></div>
+											</div>
+											<div class="form-group">
+												<div class="col-md-4"><label for="input-vnc_eth">Result ETH: </label></div>
+												<div class="col-md-8 text-right"> <input type="hidden" id="input-vnc_eth" name="total_eth"> <span id="res-vnc_eth"></span>  ETH</div>
+											</div>
+											<div class="form-group text-right">
+												<button type="submit" class="btn btn-primary btn-vnc_eth" disabled>
+													Submit
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="withdraw">
+									<form action="/api/withdraw" class="form-horizontal" method="POST">
+										<input type="hidden" name="email" value="{{Auth::user()->email}}">
+										<div class="col-md-6">
+											<div class="form-group">
+												<div class="col-md-4"><label for="">Saldo ETH: </label></div> 
+												<div class="col-md-8 text-right">@if(empty($wallet->total_eth)) 0 @else {{$wallet->total_eth}} @endif ETH</div>
+											</div>
+											<div class="form-group">
+												<div class="col-md-4"><label for="vnc_eth">Total Withdraw ETH: </label></div> 
+												<div class="col-md-8 text-right"><input type="text" name="total_eth" id="eth_vnc" class="form-control" onkeyup="checkVal(event, 'eth_vnc', this.value, {{$wallet->total_eth}})" onblur="checkConvert('eth_vnc', this.value)"></div>
+											</div>
+											<div class="form-group text-right">
+												<button type="submit" class="btn btn-primary btn-eth_vnc" disabled>
+													Withdraw
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

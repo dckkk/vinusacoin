@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Wallet;
+use App\Coin;
 
 class ApiController extends Controller
 {
@@ -25,7 +26,7 @@ class ApiController extends Controller
         // 13jt
 
         // formula to get vnc
-        $vnc = (int) ($eth / $idr) / 10;
+        $vnc = (int) $eth / $idr;
 
         if($vnc) {
             $result = array(
@@ -62,7 +63,7 @@ class ApiController extends Controller
         // 13jt
 
         // formula to get vnc
-        $vnc = (int) ($idr * 10) / $eth;
+        $vnc = (int) $idr / $eth;
 
         if($vnc) {
             $result = array(
@@ -96,12 +97,58 @@ class ApiController extends Controller
 
     public function convertEthVnc(Request $request)
     {
-        dd($request);
+        $wallet = Wallet::where('user_email', $request->email)->first();
+        $total_coin = (float) $wallet->total_coin + $request->total_coin;
+        $total_eth = (float) $wallet->total_eth - $request->total_eth;
+        Wallet::where('user_email', $request->email)->update([
+            'total_coin' => $total_coin,
+            'total_eth' => $total_eth
+        ]);
+
+        return redirect()->back();
     }
 
     public function withdrawCallback(Request $request) 
     {
         return "ok";
+    }
+
+    public function deposit(Request $request)
+    {
+        $coin = Coin::first();
+        if($coin->stage_3 > 0) {
+            $stage = 'stage_3';
+            $coin = $coin->stage_3;
+        } elseif($coin->stage_2 > 0 && $coin->stage_3 == 0) {
+            $stage = 'stage_2';
+            $coin = $coin->stage_2;
+        } else {
+            $stage = 'stage_1';
+            $coin = $coin->stage_1;
+        }
+
+        
+        $wallet = Wallet::where('user_email', $request->email)->first();
+        $wallet = $wallet->total_coin;
+        
+        Coin::where('id', 1)->update([$stage => $coin - $request->total_coin,]);
+        Wallet::where('user_email', $request->email)->update([
+            'total_coin' => $wallet + $request->total_coin,
+            ]);
+            
+        return redirect('home');
+    }
+    
+    public function withdraw(Request $request)
+    {
+        $wallet = Wallet::where('user_email', $request->email)->first();
+        $wallet = $wallet->total_eth;
+        
+        Wallet::where('user_email', $request->email)->update([
+            'total_eth' => $wallet - $request->total_eth,
+            ]);
+            
+        return redirect('home');
     }
 
 }

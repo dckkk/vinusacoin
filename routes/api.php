@@ -23,4 +23,6 @@ Route::middleware('api')->group(function () {
     Route::get('/withdraw/callback', 'ApiController@withdrawCallback');
     Route::post('/convertVncEth', 'ApiController@convertVncEth');
     Route::post('/convertEthVnc', 'ApiController@convertEthVnc');
+    Route::post('/deposit', 'ApiController@deposit');
+    Route::post('/withdraw', 'ApiController@withdraw');
 });
