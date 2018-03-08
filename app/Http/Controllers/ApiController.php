@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Wallet;
 use App\Coin;
+use App\OrderHistory;
+use Carbon\Carbon;
 
 class ApiController extends Controller
 {
@@ -91,6 +93,13 @@ class ApiController extends Controller
             'total_coin' => $total_coin,
             'total_eth' => $total_eth
         ]);
+        OrderHistory::create([
+            'user_email' => $request->email,
+            'action' => 'Convert VNC to ETH',
+            'total' => $request->total_coin,
+            'result' => 'success'
+        ]);
+        
 
         return redirect()->back();
     }
@@ -103,6 +112,12 @@ class ApiController extends Controller
         Wallet::where('user_email', $request->email)->update([
             'total_coin' => $total_coin,
             'total_eth' => $total_eth
+        ]);
+        OrderHistory::create([
+            'user_email' => $request->email,
+            'action' => 'Convert ETH to VNC',
+            'total' => $request->total_eth,
+            'result' => 'success'
         ]);
 
         return redirect()->back();
@@ -131,10 +146,22 @@ class ApiController extends Controller
         $wallet = Wallet::where('user_email', $request->email)->first();
         $wallet = $wallet->total_coin;
         
+        // date now
+        $now = Carbon::now('Asia/Jakarta');
+
         Coin::where('id', 1)->update([$stage => $coin - $request->total_coin,]);
         Wallet::where('user_email', $request->email)->update([
             'total_coin' => $wallet + $request->total_coin,
             ]);
+        OrderHistory::create([
+            'user_email' => $request->email,
+            'action' => 'Deposit VNC',
+            'total' => $request->total_coin,
+            'result' => 'pending',
+            'description' => 'Wait transfer ETH to VIP Bitcoin Account',
+            'expired_date' => $now->addHours(2),
+            'transfer_need' => $request->total_eth
+        ]);
             
         return redirect('home');
     }
