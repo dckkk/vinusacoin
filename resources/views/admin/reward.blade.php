@@ -4,43 +4,32 @@
 @section('content')
 	<section class="content-header">
 		<h1>
-			Investment Plan
+			Details Your Investment
 		</h1>
 		<ol class="breadcrumb">
 			<li><a href="/home"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-			<li class="active">Investment Plan</li>
+			<li class="active">Reward</li>
 		</ol>
 	</section>
 
 	<section class="content">
-		<p style="color: red;">Note: You should to still have 25VNC after Deposit your VNC to Plan !</p>
 		<div class="row">
 			<div class="table-responsive">
 				<table class="table table-bordered table-striped text-center">
 					<tr>
-						<th>No.</th>
-						<th>Plan Name</th>
-						<th>Terms</th>
-						<th>Monthly Return Guaranteed</th>
-						<th>Min. Spend</th>
-						<th>Max. Spend</th>
-						<th>Action</th>
+						<th>Email</th>
+						<th>Your Plan</th>
+						<th>Reward Total per Month</th>
+						<th>Contract Expired</th>
 					</tr>
-					@foreach($plans as $key => $plan)
+					
 					<tr>
-						<td>{{ $plan->id }}</td>
-						<td>{{ $plan->name }}</td>
-						<td>{{ $plan->contract }} Bulan</td>
-						<td>{{ $plan->reward }}%</td>
-						<td>{{ $plan->min_deposit }}</td>
-						<td>{{ $plan->max_deposit }}</td>
-						@if(Helpers::checkPlans($plan->name, Auth::user()->email))
-							<td><a href="/reward/{{Auth::user()->email}}" class="btn btn-default">Check Reward</a></td>
-						@else
-							<td><a href="/deposit/{{$plan->name}}" class="btn btn-default">Register</a></td>
-						@endif
-					</tr>
-					@endforeach
+                        <td>{{$reward->user_email}}</td>
+                        <td>{{$reward->paket_name}}</td>
+                        <td>{{$reward->total_reward}}</td>
+                        <td>{{$reward->expired_date}}</td>
+                    </tr>
+					
 				</table>
 			</div>
 		</div>

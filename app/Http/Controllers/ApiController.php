@@ -4,13 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Carbon\Carbon;
 use App\Wallet;
 use App\Coin;
 use App\OrderHistory;
-use Carbon\Carbon;
+use App\Paket;
+use App\InvestmentUser;
 
 class ApiController extends Controller
 {
+
     public function getEthVnc()
     {
         // get guzzle class
@@ -162,7 +165,7 @@ class ApiController extends Controller
             'expired_date' => $now->addHours(2),
             'transfer_need' => $request->total_eth
         ]);
-            
+        
         return redirect('home');
     }
     
@@ -174,8 +177,37 @@ class ApiController extends Controller
         Wallet::where('user_email', $request->email)->update([
             'total_eth' => $wallet - $request->total_eth,
             ]);
+        OrderHistory::create([
+            'user_email' => $request->email,
+            'action' => 'Withdraw ETH',
+            'total' => $request->total_eth,
+            'result' => 'success'
+        ]);
             
         return redirect('home');
+    }
+
+    public function depositPlans(Request $request)
+    {
+        $plans = Paket::where('name', $request->paket_name)->first();
+        $wallets = Wallet::select('total_coin')->where('user_email', $request->user_email)->first();
+        $wallet = (float) $wallets->total_coin - $request->total_deposit;
+        $dt = Carbon::now('Asia/Jakarta');
+        $edt = Carbon::now('Asia/Jakarta');
+        $edt = $edt->addMonths($plans->contract);
+
+        $request['total_reward'] = (float) ($request->total_deposit * $plans->reward) / 100;
+        $request['join_date'] = $dt->year.'-'.$dt->month.'-'.$dt->day;
+        $request['reward_date'] = $dt->day;
+        $request['expired_date'] = $edt->year.'-'.$edt->month.'-'.$edt->day;
+
+        $requestData = $request->all();
+        InvestmentUser::create($requestData);
+        Wallet::where('user_email', $request->user_email)->update([
+            'total_coin' => $wallet,
+        ]);
+
+        return redirect('/client-investment');
     }
 
 }

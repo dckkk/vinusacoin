@@ -18,11 +18,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::middleware('api')->group(function () {
-    Route::get('/eth_vnc', 'ApiController@getEthVnc');
     Route::get('/vnc_eth', 'ApiController@getVncEth');
-    Route::get('/withdraw/callback', 'ApiController@withdrawCallback');
+    Route::get('/eth_vnc', 'ApiController@getEthVnc');
     Route::post('/convertVncEth', 'ApiController@convertVncEth');
     Route::post('/convertEthVnc', 'ApiController@convertEthVnc');
     Route::post('/deposit', 'ApiController@deposit');
     Route::post('/withdraw', 'ApiController@withdraw');
+    Route::get('/withdraw/callback', 'ApiController@withdrawCallback');
+    Route::post('/depositPlans', 'ApiController@depositPlans');
 });

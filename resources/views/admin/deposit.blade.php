@@ -7,7 +7,7 @@
 			Deposit
 		</h1>
 		<ol class="breadcrumb">
-			<li><a href="#"><i class="fa fa-credit-card"></i> Home</a></li>
+			<li><a href="/home"><i class="fa fa-credit-card"></i> Dashboard</a></li>
 			<li class="active">Deposit</li>
 		</ol>
 	</section>
@@ -28,6 +28,7 @@
 							<div class="tab-content">
 								<div role="tabpanel" class="tab-pane active" id="deposit">
 									<form action="/api/deposit" class="form-horizontal" method="POST">
+										{{ csrf_field() }}
 										<input type="hidden" name="email" value="{{Auth::user()->email}}">
 										<div class="col-md-6">
 											<div class="form-group">
@@ -39,7 +40,7 @@
 												<div class="col-md-8 text-right"><input type="text" name="total_coin" id="vnc_eth" class="form-control" onkeyup="checkVal(event, 'vnc_eth')" onblur="checkConvert('vnc_eth', this.value)"></div>
 											</div>
 											<div class="form-group">
-												<div class="col-md-4"><label for="input-vnc_eth">Result ETH: </label></div>
+												<div class="col-md-4"><label for="input-vnc_eth">Total ETH Needed: </label></div>
 												<div class="col-md-8 text-right"> <input type="hidden" id="input-vnc_eth" name="total_eth"> <span id="res-vnc_eth"></span>  ETH</div>
 											</div>
 											<div class="form-group text-right">
@@ -52,6 +53,7 @@
 								</div>
 								<div role="tabpanel" class="tab-pane" id="withdraw">
 									<form action="/api/withdraw" class="form-horizontal" method="POST">
+										{{ csrf_field() }}
 										<input type="hidden" name="email" value="{{Auth::user()->email}}">
 										<div class="col-md-6">
 											<div class="form-group">

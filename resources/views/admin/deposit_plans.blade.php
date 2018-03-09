@@ -7,41 +7,69 @@
 			Investment Plan
 		</h1>
 		<ol class="breadcrumb">
-			<li><a href="/home"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+			<li><a href="/home"><i class="fa fa-credit-card"></i> Dashboard</a></li>
 			<li class="active">Investment Plan</li>
 		</ol>
 	</section>
 
 	<section class="content">
-		<p style="color: red;">Note: You should to still have 25VNC after Deposit your VNC to Plan !</p>
-		<div class="row">
-			<div class="table-responsive">
-				<table class="table table-bordered table-striped text-center">
-					<tr>
-						<th>No.</th>
-						<th>Plan Name</th>
-						<th>Terms</th>
-						<th>Monthly Return Guaranteed</th>
-						<th>Min. Spend</th>
-						<th>Max. Spend</th>
-						<th>Action</th>
-					</tr>
-					@foreach($plans as $key => $plan)
-					<tr>
-						<td>{{ $plan->id }}</td>
-						<td>{{ $plan->name }}</td>
-						<td>{{ $plan->contract }} Bulan</td>
-						<td>{{ $plan->reward }}%</td>
-						<td>{{ $plan->min_deposit }}</td>
-						<td>{{ $plan->max_deposit }}</td>
-						@if(Helpers::checkPlans($plan->name, Auth::user()->email))
-							<td><a href="/reward/{{Auth::user()->email}}" class="btn btn-default">Check Reward</a></td>
-						@else
-							<td><a href="/deposit/{{$plan->name}}" class="btn btn-default">Register</a></td>
-						@endif
-					</tr>
-					@endforeach
-				</table>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+                            Deposit your VNC
+						</div>
+						<div class="panel-body">
+							<!-- Tab panes -->
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="deposit">
+									<form action="/api/depositPlans" class="form-horizontal" method="POST">
+										{{ csrf_field() }}
+										<input type="hidden" name="user_email" value="{{Auth::user()->email}}">
+										<input type="hidden" name="paket_name" value="{{$plans->name}}">
+										<div class="col-md-6">
+											<div class="form-group">
+												<div class="col-md-4"><label for="">Saldo VNC: </label></div> 
+												<div class="col-md-8 text-right">@if(empty($wallet->total_coin)) 0 @else {{$wallet->total_coin}} @endif VNC</div>
+											</div>
+											<div class="form-group">
+												<div class="col-md-4"><label for="vnc_eth">Total Deposit VNC: </label></div> 
+												<div class="col-md-8 text-right"><input type="text" name="total_deposit" id="vnc_eth" class="form-control"></div>
+											</div>
+											<div class="form-group text-right">
+												<button type="submit" class="btn btn-primary btn-vnc_eth">
+													Submit
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="withdraw">
+									<form action="/api/withdraw" class="form-horizontal" method="POST">
+										{{ csrf_field() }}
+										<input type="hidden" name="email" value="{{Auth::user()->email}}">
+										<div class="col-md-6">
+											<div class="form-group">
+												<div class="col-md-4"><label for="">Saldo ETH: </label></div> 
+												<div class="col-md-8 text-right">@if(empty($wallet->total_eth)) 0 @else {{$wallet->total_eth}} @endif ETH</div>
+											</div>
+											<div class="form-group">
+												<div class="col-md-4"><label for="vnc_eth">Total Withdraw ETH: </label></div> 
+												<div class="col-md-8 text-right"><input type="text" name="total_eth" id="eth_vnc" class="form-control" onkeyup="checkVal(event, 'eth_vnc', this.value, {{$wallet->total_eth}})" onblur="checkConvert('eth_vnc', this.value)"></div>
+											</div>
+											<div class="form-group text-right">
+												<button type="submit" class="btn btn-primary btn-eth_vnc" disabled>
+													Withdraw
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>

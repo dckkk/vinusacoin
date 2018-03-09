@@ -23,7 +23,8 @@ Route::middleware(['web', 'auth'])->group(function () {
 	Route::get('/home', 'HomeController@index')->name('home');
 	Route::get('/deposit', 'HomeController@deposit')->name('home');
 	Route::get('/client-investment', 'HomeController@invest');
-	Route::post('/trade/vns_eth', 'HomeController@tradeVnsEth');
+	Route::get('/deposit/{a}', 'HomeController@depositRegister');
+	Route::get('/reward/{a}', 'HomeController@reward');
 });
 
 Route::middleware(['web'])->group(function () {

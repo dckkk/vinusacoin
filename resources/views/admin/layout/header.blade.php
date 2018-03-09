@@ -92,7 +92,7 @@
 			<li>
 				<a href="/deposit">
 					<i class="fa fa-credit-card"></i>
-					<span>Deposit</span>
+					<span>Deposit / Withdraw</span>
 				</a>
 			</li>
 			<li>	

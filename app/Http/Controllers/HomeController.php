@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Paket;
 use App\Wallet;
+use App\InvestmentUser;
 use Auth;
 
 class HomeController extends Controller
@@ -59,7 +60,7 @@ class HomeController extends Controller
         $data = $this->data;
         $wallet = Wallet::where('user_email', Auth::user()->email)->first();
         $data['wallet'] = $wallet;
-
+        
         return view('admin/deposit', $data);
     }
     
@@ -72,9 +73,27 @@ class HomeController extends Controller
         
         return view('admin/plans', $data);
     }
-
-    public function tradeVnsEth()
+    
+    public function depositRegister($plan)
+    {   
+        $data = $this->data;
+        
+        $wallet = Wallet::where('user_email', Auth::user()->email)->first();
+        $plans = Paket::where('name', $plan)->first();
+        
+        $data['wallet'] = $wallet;
+        $data['plans'] = $plans;
+        
+        return view('admin/deposit_plans', $data);
+    }
+    
+    public function reward($email)
     {
-        return "a";
+        $data = $this->data;
+        
+        $reward = InvestmentUser::where('user_email', $email)->first();
+        $data['reward'] = $reward;
+        
+        return view('admin/reward', $data);
     }
 }
