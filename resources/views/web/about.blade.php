@@ -6,8 +6,8 @@
 
 @section('content')
 	<h1>About Us</h1>
-	@foreach(__('about_us') as $content)
-		<p style="text-align:justify">{{ $content }}</p>
+	@foreach(__('about_us') as $key => $content)
+		{!! $content !!}
 	@endforeach
 @endsection
 
