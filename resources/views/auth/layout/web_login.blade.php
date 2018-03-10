@@ -56,6 +56,8 @@
 			</div>
 		</div>
 	</div>
+
+	@yield('modal_content')
 	<script>
 		$(document).ready(function(){
 			$('#backlink').on('click', function(){

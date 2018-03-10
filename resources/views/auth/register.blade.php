@@ -73,7 +73,17 @@
                     </div>
                     <div class="form-group">
                         <div class="text-center">
-                            <button type="submit" class="btn btn-login">@lang('Register')</button>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="accept_term" id="accept_term" value="true">
+                                    Accept  <a href="#as" data-toggle="modal" data-target="#terms_content" id="check_terms">Terms and Conditions</a>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="text-center">
+                            <button type="submit" id="button_submit" disabled class="btn btn-login">@lang('Register')</button>
                         </div>
                     </div>
                 </div>
@@ -87,18 +97,39 @@
         @lang('Already have account') ? <a href="{{ route('login') }}">@lang('Sign in Now')</a>
     </div>
 </div>
-<script type="text/javascript">
-var verifyCallback = function(response) {
-        alert(response);
-        return false;
-      };
-  var onloadCallback = function() {
-        grecaptcha.render('recaptcha', {
-            'sitekey' : '6LdYTUgUAAAAAOnzCbtXofPUvV03D_I1z2Im5WQ1'
-        });
-  };
-</script>
+@endsection
+
+
+@section('modal_content')
+<div id="terms_content" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">Terms and Condition</h3>
+            </div>
+            <div class="modal-body">
+                {!! __('term_condition.content') !!}
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @section('javascript')
+    <script type="text/javascript">
+        var verifyCallback = function(response) {
+            alert(response);
+            return false;
+        };
+        var onloadCallback = function() {
+            grecaptcha.render('recaptcha', {
+                'sitekey' : '6LdYTUgUAAAAAOnzCbtXofPUvV03D_I1z2Im5WQ1'
+            });
+        };
+
+        $("#accept_term").on('change', function(){
+            document.getElementById('button_submit').disabled = !this.checked;
+        });
+    </script>
 @endsection
