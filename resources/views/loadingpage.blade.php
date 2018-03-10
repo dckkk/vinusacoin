@@ -2,6 +2,7 @@
 <html lang="{{ App::getLocale() }}">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="refresh" content="5;URL='/home'" />  
 	<title>VINUSA COIN - {{ $page_title }}</title>
 	<link rel="shortcut icon" href="{{$header['logo']}}">
 	{{-- high level css --}}

@@ -81,8 +81,8 @@ class WebController extends Controller {
         return view('web/investment', $data);
     }
 
-    public function loading(){
-
+    public function loading()
+    {
         $data = $this->data;
         $data['page_title'] = "Processing Data";
         $data['header']['page_title'] = $data['page_title'];

@@ -87,11 +87,11 @@ class HomeController extends Controller
         return view('admin/deposit_plans', $data);
     }
     
-    public function reward($email)
+    public function reward(Request $request)
     {
         $data = $this->data;
         
-        $reward = InvestmentUser::where('user_email', $email)->first();
+        $reward = InvestmentUser::where('user_email', $request->email)->where('paket_name', $request->paket)->first();
         $data['reward'] = $reward;
         
         return view('admin/reward', $data);

@@ -134,15 +134,15 @@ class ApiController extends Controller
     public function deposit(Request $request)
     {
         $coin = Coin::first();
-        if($coin->stage_3 > 0) {
-            $stage = 'stage_3';
-            $coin = $coin->stage_3;
-        } elseif($coin->stage_2 > 0 && $coin->stage_3 == 0) {
+        if($coin->stage_1 > 0) {
+            $stage = 'stage_1';
+            $coin = $coin->stage_1;
+        } elseif($coin->stage_2 > 0 && $coin->stage_1 == 0) {
             $stage = 'stage_2';
             $coin = $coin->stage_2;
         } else {
             $stage = 'stage_1';
-            $coin = $coin->stage_1;
+            $coin = $coin->stage_3;
         }
 
         
@@ -166,7 +166,7 @@ class ApiController extends Controller
             'transfer_need' => $request->total_eth
         ]);
         
-        return redirect('home');
+        return redirect('loading');
     }
     
     public function withdraw(Request $request)
