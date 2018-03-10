@@ -35,7 +35,7 @@
 						<td>{{ $plan->min_deposit }}</td>
 						<td>{{ $plan->max_deposit }}</td>
 						@if(Helpers::checkPlans($plan->name, Auth::user()->email))
-							<td><a href="/reward/{{Auth::user()->email}}" class="btn btn-default">Check Reward</a></td>
+							<td><a href="/reward?email={{Auth::user()->email}}&paket={{$plan->name}}" class="btn btn-default">Check Reward</a></td>
 						@else
 							<td><a href="/deposit/{{$plan->name}}" class="btn btn-default">Register</a></td>
 						@endif

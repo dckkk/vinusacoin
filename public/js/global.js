@@ -1,11 +1,9 @@
 function checkVal(event, convert, value, maxValue) {
-    $('#res-'+convert).html('Wait ...');
-    $('.btn-'+convert).prop('disabled', true);
     if(value) {
         if(value > maxValue) {
             $('#'+convert).val(
                 function (index, value) {
-                    return value.substr(0, value.length - 1);
+                    return value.replace(0, value.length - 1);
                 }
             );
         }
@@ -13,10 +11,13 @@ function checkVal(event, convert, value, maxValue) {
     if(![48,49,50,51,52,53,54,55,56,57,190].includes(event.keyCode)) {
         $('#'+convert).val(
             function (index, value) {
-                return value.substr(0, value.length - 1);
+                return value.replace(/[^\d]/g, "");
             }
         );
-    }
+    } else {
+        $('#res-'+convert).html('Wait ...');
+        $('.btn-'+convert).prop('disabled', true);
+    } 
 }
 function checkConvert(convert, value) {
     $.get('/api/'+convert, function(data){
