@@ -33,6 +33,8 @@ Route::middleware(['web'])->group(function () {
 	Route::get('/about', 'WebController@about');
 	Route::get('/contact', 'WebController@contact');
 	Route::get('/investment', 'WebController@investment');
+
+	Route::get('/loading', 'WebController@loading');
 });
 
 

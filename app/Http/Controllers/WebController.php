@@ -80,4 +80,13 @@ class WebController extends Controller {
         $data['plan'] = $plan; 
         return view('web/investment', $data);
     }
+
+    public function loading(){
+
+        $data = $this->data;
+        $data['page_title'] = "Processing Data";
+        $data['header']['page_title'] = $data['page_title'];
+        $data['footer']['page_title'] = $data['page_title'];
+        return view('loadingpage', $data);
+    }
 }
