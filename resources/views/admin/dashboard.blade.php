@@ -40,12 +40,14 @@
 								</div>
 								<div class="panel-body">
 									<div class="col-md-12">
+										<p style="color:red">Note: You must have minimum 50 VNC !</p>
+										<p class="warn-vnc_eth" style="display:none;color:red;"></p>
 										<div class="col-md-4">Saldo VNC: </div> 
 										<div class="col-md-8 text-right">@if(empty($wallet->total_coin)) 0 @else {{$wallet->total_coin}} @endif VNC</div>
 									</div>
 									<div class="col-md-12">
 										<div class="col-md-4">Total VNC: </div> 
-										<div class="col-md-8 text-right"><input type="text" name="total_coin" id="vnc_eth" class="form-control" onkeyup="checkVal(event, 'vnc_eth', this.value, {{$wallet->total_coin}})" onblur="checkConvert('vnc_eth', this.value)"></div>
+										<div class="col-md-8 text-right"><input type="text" name="total_coin" id="vnc_eth" class="form-control" onkeyup="checkVal(event, 'vnc_eth', this.value, {{$wallet->total_coin}})" onblur="checkConvert('vnc_eth', this.value, {{$wallet->total_coin}})"></div>
 									</div>
 									<div class="col-md-12">
 										<div class="col-md-4">Result ETH: </div>
@@ -69,12 +71,13 @@
 								</div>
 								<div class="panel-body">
 									<div class="col-md-12">
+										<p class="warn-eth_vnc" style="display:none;color:red;"></p>
 										<div class="col-md-4">Saldo ETH: </div> 
 										<div class="col-md-8 text-right">@if(empty($wallet->total_eth)) 0 @else {{$wallet->total_eth}} @endif ETH</div>
 									</div>
 									<div class="col-md-12">
 										<div class="col-md-4">Total ETH: </div> 
-										<div class="col-md-8 text-right"><input type="text" name="total_eth" id="eth_vnc" class="form-control" onkeyup="checkVal(event, 'eth_vnc', this.value, {{$wallet->total_eth}})" onblur="checkConvert('eth_vnc', this.value)"></div>
+										<div class="col-md-8 text-right"><input type="text" name="total_eth" id="eth_vnc" class="form-control" onkeyup="checkVal(event, 'eth_vnc', this.value, {{$wallet->total_eth}})" onblur="checkConvert('eth_vnc', this.value, {{$wallet->total_eth}})"></div>
 									</div>
 									<div class="col-md-12">
 										<div class="col-md-4">Result VNC: </div>

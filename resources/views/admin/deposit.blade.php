@@ -30,6 +30,7 @@
 									<form action="/api/deposit" class="form-horizontal" method="POST">
 										{{ csrf_field() }}
 										<input type="hidden" name="email" value="{{Auth::user()->email}}">
+										<p style="color: red">Note: Minimum deposit = 6VNC</p>
 										<div class="col-md-6">
 											<div class="form-group">
 												<div class="col-md-4"><label for="">Saldo VNC: </label></div> 
@@ -37,12 +38,14 @@
 											</div>
 											<div class="form-group">
 												<div class="col-md-4"><label for="vnc_eth">Total Deposit VNC: </label></div> 
-												<div class="col-md-8 text-right"><input type="text" name="total_coin" id="vnc_eth" class="form-control" onkeyup="checkVal(event, 'vnc_eth')" onblur="checkConvert('vnc_eth', this.value)"></div>
+												<div class="col-md-8 text-right"><input type="text" name="total_coin" id="vnc_eth" class="form-control" onkeyup="checkVal(event, 'vnc_eth')" onblur="checkConvertDeposit('vnc_eth', this.value, {{$account->id}})"></div>
 											</div>
 											<div class="form-group">
 												<div class="col-md-4"><label for="input-vnc_eth">Total ETH Needed: </label></div>
 												<div class="col-md-8 text-right"> <input type="hidden" id="input-vnc_eth" name="total_eth"> <span id="res-vnc_eth"></span>  ETH</div>
 											</div>
+											<h5>Please Transfer the result to the VIP Account: <strong>0x03bcb38b99481bd120e36c03374ebb73ee766678</strong></h5>
+											<p style="color: red">Note: Your deposit will be checked as success if you're has transfer as same as the result. We will check 1x24 hours</p>
 											<div class="form-group text-right">
 												<button type="submit" class="btn btn-primary btn-vnc_eth" disabled>
 													Submit
@@ -52,17 +55,19 @@
 									</form>
 								</div>
 								<div role="tabpanel" class="tab-pane" id="withdraw">
-									<form action="/api/withdraw" class="form-horizontal" method="POST">
+									<form action="/api/withdraw/callback" class="form-horizontal" method="POST">
 										{{ csrf_field() }}
 										<input type="hidden" name="email" value="{{Auth::user()->email}}">
 										<div class="col-md-6">
 											<div class="form-group">
+												<p style="color: red">Note: Minimum withdraw = 6VNC</p>
+												<p class="warn-eth_vnc" style="display:none;color:red"></p>
 												<div class="col-md-4"><label for="">Saldo ETH: </label></div> 
 												<div class="col-md-8 text-right">@if(empty($wallet->total_eth)) 0 @else {{$wallet->total_eth}} @endif ETH</div>
 											</div>
 											<div class="form-group">
 												<div class="col-md-4"><label for="vnc_eth">Total Withdraw ETH: </label></div> 
-												<div class="col-md-8 text-right"><input type="text" name="total_eth" id="eth_vnc" class="form-control" onkeyup="checkVal(event, 'eth_vnc', this.value, {{$wallet->total_eth}})" onblur="checkConvert('eth_vnc', this.value)"></div>
+												<div class="col-md-8 text-right"><input type="text" name="total_eth" id="eth_vnc" class="form-control" onkeyup="checkVal(event, 'eth_vnc', this.value, {{$wallet->total_eth}})" onblur="checkConvert('eth_vnc', this.value, {{$wallet->total_eth}})"></div>
 											</div>
 											<div class="form-group text-right">
 												<button type="submit" class="btn btn-primary btn-eth_vnc" disabled>

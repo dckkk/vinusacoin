@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Wallet;
+use App\Referal;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Carbon\Carbon;
 
 use App\Http\Controllers\WebController;
 
@@ -38,7 +40,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    // protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -64,6 +66,7 @@ class RegisterController extends Controller
             'password' => 'required|string|min:6|confirmed',
             'vipwallet' => 'required|string|max:255|min:6',
             'g-recaptcha-response' => 'required',
+            'referal_code' => 'required|max:45|min:6',
             ]);
         }
         
@@ -75,17 +78,31 @@ class RegisterController extends Controller
          */
         protected function create(array $data)
         {
-            Wallet::create([
-                'user_email' => $data['email'],
-                'token' => '123',
-            ]);
-            return User::create([
-                'name' => $data['name'],
-                'email' => $data['email'],
-                'password' => bcrypt($data['password']),
-                'vipwallet' => $data['vipwallet'],
-                'accesskey' => 'acesskey',
+
+            $check = Referal::where('name', $data['referal_code'])->count();
+            
+            if($check > 0) {
+                $pin = mt_rand(1000000, 9999999)
+                    . mt_rand(1000000, 9999999)
+                    . $data['email'][rand(0, strlen($data['email']) - 1)];
+    
+                Wallet::create([
+                    'user_email' => $data['email'],
+                    'token' => $string = str_shuffle($pin)
                 ]);
-                
+    
+                return User::create([
+                    'name' => $data['name'],
+                    'email' => $data['email'],
+                    'password' => bcrypt($data['password']),
+                    'vipwallet' => $data['vipwallet'],
+                    'referal_code' => $data['referal_code'],
+                    'accesskey' => bcrypt('VNC'.Carbon::now()),
+                ]);
+            } else {
+                return redirect('/register')->withErrors(["referal"]);
             }
+            
+                
+        }
 }

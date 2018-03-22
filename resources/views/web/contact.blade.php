@@ -17,29 +17,29 @@
 		</div>
 		<div class="col-md-8">
 			<h3 class="text-center">Send a Message</h3>
-			<form action="#">
+			<form action="/send/email" method="POST">
                 {{ csrf_field() }}
 				<div class="row">
 					<div class="col-md-4">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-user"></i></span>
-							<input placeholder="@lang('Your Name')" type="text" class="form-control">
+							<input name="name" placeholder="@lang('Your Name')" type="text" class="form-control">
 						</div>
 					</div>
 					<div class="col-md-8">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
-							<input placeholder="@lang('Your Email Address')" type="text" class="form-control">
+							<input name="email" placeholder="@lang('Your Email Address')" type="text" class="form-control">
 						</div>
 					</div>
 					<div class="col-md-12">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-bookmark"></i></span>
-							<input placeholder="@lang('Subject')" type="text" class="form-control">
+							<input name="subject" placeholder="@lang('Subject')" type="text" class="form-control">
 						</div>
 					</div>
 					<div class="col-md-12">
-						<textarea  class="form-control" placeholder="@lang('Your Message')"></textarea>
+						<textarea name="message" class="form-control" placeholder="@lang('Your Message')"></textarea>
 					</div>
 					<div class="col-md-12 text-right">
 							<button class="btn btn-default">

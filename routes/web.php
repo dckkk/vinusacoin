@@ -25,7 +25,7 @@ Route::middleware(['web', 'auth'])->group(function () {
 	Route::get('/client-investment', 'HomeController@invest');
 	Route::get('/deposit/{a}', 'HomeController@depositRegister');
 	Route::get('/reward', 'HomeController@reward');
-	Route::get('/loading', 'WebController@loading');
+	Route::get('/loading', 'HomeController@loading');
 });
 
 Route::middleware(['web'])->group(function () {
@@ -34,6 +34,7 @@ Route::middleware(['web'])->group(function () {
 	Route::get('/about', 'WebController@about');
 	Route::get('/contact', 'WebController@contact');
 	Route::get('/investment', 'WebController@investment');
+	Route::post('/send/email', 'WebController@sendEmail');
 });
 
 

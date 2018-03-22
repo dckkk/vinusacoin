@@ -36,6 +36,11 @@
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>Error !</strong> Please verify the Captcha !
                     </div>
+                @elseif($errors->has('referal_code'))
+                    <div class="alert alert-danger fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Error !</strong> Referal tidak valid !
+                    </div>
                 @endif
                 <div class="col-sm-12">
                     <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
@@ -66,6 +71,12 @@
                         <label class="form-label" for="vipwallet"><span class="fa-id-card-o fa"></span></label>
                         <div class="input-wrapper">
                             <input type="vipwallet" name="vipwallet" value="{{ old('vipwallet') }}" class="form-control" id="vipwallet" placeholder="@lang('Your Wallet ETH')">
+                        </div>
+                    </div>
+                    <div class="form-group {{ $errors->has('referal_code') ? ' has-error' : '' }}">
+                        <label class="form-label" for="referal_code"><span class="fa-retweet fa"></span></label>
+                        <div class="input-wrapper">
+                            <input type="referal_code" name="referal_code" value="{{ old('referal_code') }}" class="form-control" id="referal_code" placeholder="Referal Code">
                         </div>
                     </div>
                     <div class="fom-group">
