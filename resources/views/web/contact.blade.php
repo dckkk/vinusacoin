@@ -17,37 +17,45 @@
 		</div>
 		<div class="col-md-8">
 			<h3 class="text-center">Send a Message</h3>
-			<form action="#">
+			<form action="{{ route('send') }}" method="post">
                 {{ csrf_field() }}
 				<div class="row">
 					<div class="col-md-4">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-user"></i></span>
-							<input placeholder="@lang('Your Name')" type="text" class="form-control">
+							<input placeholder="@lang('Your Name')" name="name" type="text" class="form-control">
 						</div>
 					</div>
 					<div class="col-md-8">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
-							<input placeholder="@lang('Your Email Address')" type="text" class="form-control">
+							<input placeholder="@lang('Your Email Address')" name="email_address" type="text" class="form-control">
 						</div>
 					</div>
 					<div class="col-md-12">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-bookmark"></i></span>
-							<input placeholder="@lang('Subject')" type="text" class="form-control">
+							<input placeholder="@lang('Subject')" type="text" name="subject" class="form-control">
 						</div>
 					</div>
 					<div class="col-md-12">
-						<textarea  class="form-control" placeholder="@lang('Your Message')"></textarea>
+						<textarea  class="form-control" name="theMessage" placeholder="@lang('Your Message')"></textarea>
 					</div>
 					<div class="col-md-12 text-right">
-							<button class="btn btn-default">
-								Send Email
-							</button>
+						<button class="btn btn-default">
+							Send Email
+						</button>
 					</div>
 				</div>
 			</form>
+
+
+            @if(session('message'))
+            	<div class="alert alert-success">
+            		<strong>Success</strong>
+            		{{ session('message') }}
+            	</div>
+            @endif
 		</div>
 	</div>
 @endsection

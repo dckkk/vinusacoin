@@ -32,8 +32,8 @@ Route::middleware(['web'])->group(function () {
 	Auth::routes();
 	Route::get('/', 'WebController@home');
 	Route::get('/about', 'WebController@about');
-	Route::get('/contact', 'WebController@contact');
+	Route::get('/contact', 'WebController@contact')->name('contact');
 	Route::get('/investment', 'WebController@investment');
+	
+	Route::post('send', 'EmailController@send')->name('send');
 });
-
-
