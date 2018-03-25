@@ -28,7 +28,7 @@
 		<tr>
 			<td>{{ $plans->id }}</td>
 			<td>{{ $plans->name }}</td>
-			<td>{{ $plans->contract }} Bulan</td>
+			<td>{{ $plans->contract }} @lang('bulan')</td>
 			<td>{{ $plans->reward }}%</td>
 			<td>{{ $plans->min_deposit }} VNC</td>
 			<td>{{ $plans->max_deposit }} VNC</td>

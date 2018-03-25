@@ -1,0 +1,25 @@
+{
+	"Home": "ホーム",
+	"About Us": "会社概要",
+	"Contact Us": "お問い合わせ",
+	"create account": "アカウントを作成する",
+	"Investment Plan": "投資計画",
+	
+	"Email Address": "メールアドレス",
+	"Password": "パスワード",
+	"Confirm Password": "パスワードを認証する",
+	"Remember Me": "私を覚えて",
+	"Your Name": "あなたの名前",
+	"Your Wallet ETH": "あなたのETHウォレット",
+	"Already have account": "すでにアカウントを持っている",
+	"Forgot password": "パスワードを忘れました",
+	"Create an account": "アカウントを作成",
+	"Login": "サインイン",
+	"Sign in Now": "今すぐサインイン",
+	"Submit": "送信",
+	"Register": "登録",
+	"Send Link": "リンクを送る",
+	"info reset": "あなたの電子メールにパスワード変更リンクが送信されます",
+	"bulan": "月",
+	"Sign Out": "サインアウト"
+}

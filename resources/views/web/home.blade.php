@@ -30,7 +30,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
+	<!-- <div class="row">
 		<div class="col-md-4">
 			<h1><small>Plan Today</small><br>Execute Anytime</h1>
 		</div>
@@ -54,7 +54,7 @@
 				</tbody>
 			</table>
 		</div>
-	</div>
+	</div> -->
 @endsection
 
 @section('javascript')
