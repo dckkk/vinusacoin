@@ -11,17 +11,17 @@
 			<div class="col-md-3 text-center hide animated">
 				<span class="fa fa-hourglass-start"></span>
 				<h4>Stage 1</h4>
-				<h3>{{ number_format($coin->stage_1) }} <small>coin</small></h3>
+				<h3>{{ number_format($coin->stage_1) }} <small>VNC</small></h3>
 			</div>
 			<div class="col-md-3 text-center hide animated">
 				<span class="fa fa-hourglass-half"></span>
 				<h4>Stage 2</h4>
-				<h3>{{ number_format($coin->stage_2) }} <small>coin</small></h3>
+				<h3>{{ number_format($coin->stage_2) }} <small>VNC</small></h3>
 			</div>
 			<div class="col-md-3 text-center hide animated">
 				<span class="fa fa-hourglass-end"></span>
 				<h4>Stage 3</h4>
-				<h3>{{ number_format($coin->stage_3) }} <small>coin</small></h3>
+				<h3>{{ number_format($coin->stage_3) }} <small>VNC</small></h3>
 			</div>
 			<div class="col-md-3 text-center hide animated">
 				<span class="fa fa-hourglass"></span>

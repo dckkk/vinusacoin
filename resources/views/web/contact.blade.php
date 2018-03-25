@@ -49,7 +49,6 @@
 				</div>
 			</form>
 
-
             @if(session('message'))
             	<div class="alert alert-success">
             		<strong>Success</strong>

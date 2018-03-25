@@ -34,33 +34,13 @@
 												<div class="col-md-8 text-right">@if(empty($wallet->total_coin)) 0 @else {{$wallet->total_coin}} @endif VNC</div>
 											</div>
 											<div class="form-group">
+												<p class="warn-vnc_eth" style="diplay:none;color:red"></p>
 												<div class="col-md-4"><label for="vnc_eth">Total Deposit VNC: </label></div> 
-												<div class="col-md-8 text-right"><input type="text" name="total_deposit" id="vnc_eth" class="form-control"></div>
+												<div class="col-md-8 text-right"><input type="text" name="total_deposit" id="vnc_eth" class="form-control" onkeyup="checkVal(event, 'vnc_eth', this.value, {{$wallet->total_coin}})" onblur="checkPlans('vnc_eth', this.value, {{$wallet->total_coin}}, {{$plans->min_deposit}}, {{$plans->max_deposit}})"></div>
 											</div>
 											<div class="form-group text-right">
 												<button type="submit" class="btn btn-primary btn-vnc_eth">
 													Submit
-												</button>
-											</div>
-										</div>
-									</form>
-								</div>
-								<div role="tabpanel" class="tab-pane" id="withdraw">
-									<form action="/api/withdraw" class="form-horizontal" method="POST">
-										{{ csrf_field() }}
-										<input type="hidden" name="email" value="{{Auth::user()->email}}">
-										<div class="col-md-6">
-											<div class="form-group">
-												<div class="col-md-4"><label for="">Saldo ETH: </label></div> 
-												<div class="col-md-8 text-right">@if(empty($wallet->total_eth)) 0 @else {{$wallet->total_eth}} @endif ETH</div>
-											</div>
-											<div class="form-group">
-												<div class="col-md-4"><label for="vnc_eth">Total Withdraw ETH: </label></div> 
-												<div class="col-md-8 text-right"><input type="text" name="total_eth" id="eth_vnc" class="form-control" onkeyup="checkVal(event, 'eth_vnc', this.value, {{$wallet->total_eth}})" onblur="checkConvert('eth_vnc', this.value)"></div>
-											</div>
-											<div class="form-group text-right">
-												<button type="submit" class="btn btn-primary btn-eth_vnc" disabled>
-													Withdraw
 												</button>
 											</div>
 										</div>

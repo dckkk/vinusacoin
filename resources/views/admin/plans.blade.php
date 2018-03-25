@@ -13,7 +13,7 @@
 	</section>
 
 	<section class="content">
-		<p style="color: red;">Note: You should to still have 25VNC after Deposit your VNC to Plan !</p>
+		<p style="color:red">Note: You must have minimum 50VNC !</p>
 		<div class="row">
 			<div class="table-responsive">
 				<table class="table table-bordered table-striped text-center">

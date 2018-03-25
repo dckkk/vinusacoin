@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\User;
 use App\Paket;
 use App\Wallet;
 use App\InvestmentUser;
@@ -23,6 +24,7 @@ class HomeController extends Controller
         $this->data = [
 			"page_title" => "Dashboard",
 			"header" => [
+                "logo" => "/images/logo.png",
 				"images_user2" => "/images/img/user2-160x160.jpg",
 				"images_user3" => "/images/img/user3-128x128.jpg",
 				"images_user4" => "/images/img/user4-128x128.jpg",
@@ -55,11 +57,23 @@ class HomeController extends Controller
         return view('admin/dashboard', $data);
     }
 
+    public function loading(Request $request)
+    {
+        $data = $this->data;
+        $data['page_title'] = "Processing Data";
+        $data['email'] = $request->email; 
+        $data['total_eth'] = $request->total_eth;
+
+        return view('loadingpage', $data);
+    }
+
     public function deposit()
     {
         $data = $this->data;
+        $user = User::where('email', Auth::user()->email)->first();
         $wallet = Wallet::where('user_email', Auth::user()->email)->first();
         $data['wallet'] = $wallet;
+        $data['account'] = $wallet;
         
         return view('admin/deposit', $data);
     }

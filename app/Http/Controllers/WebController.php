@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Http\Request;
+
 use App;
 use App\Http\Controllers\Controller;
 use App\Coin;
 use App\Paket;
+use App\Email;
 
 class WebController extends Controller {
 	public $data;
@@ -81,12 +85,11 @@ class WebController extends Controller {
         return view('web/investment', $data);
     }
 
-    public function loading()
-    {
-        $data = $this->data;
-        $data['page_title'] = "Processing Data";
-        $data['header']['page_title'] = $data['page_title'];
-        $data['footer']['page_title'] = $data['page_title'];
-        return view('loadingpage', $data);
+    public function sendEmail(Request $request) {
+        $requestData = $request->all();
+        Email::create($requestData);
+
+        return redirect('/contact');
     }
+
 }
