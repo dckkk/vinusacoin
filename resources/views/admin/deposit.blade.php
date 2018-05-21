@@ -33,7 +33,7 @@
 										<p style="color: red">Note: Minimum deposit = 6VNC</p>
 										<div class="col-md-6">
 											<div class="form-group">
-												<div class="col-md-4"><label for="">Saldo VNC: </label></div> 
+												<div class="col-md-4"><label for="">Balance VNC: </label></div> 
 												<div class="col-md-8 text-right">@if(empty($wallet->total_coin)) 0 @else {{$wallet->total_coin}} @endif VNC</div>
 											</div>
 											<div class="form-group">
@@ -62,7 +62,7 @@
 											<div class="form-group">
 												<p style="color: red">Note: Minimum withdraw = 6VNC</p>
 												<p class="warn-eth_vnc" style="display:none;color:red"></p>
-												<div class="col-md-4"><label for="">Saldo ETH: </label></div> 
+												<div class="col-md-4"><label for="">Balance ETH: </label></div> 
 												<div class="col-md-8 text-right">@if(empty($wallet->total_eth)) 0 @else {{$wallet->total_eth}} @endif ETH</div>
 											</div>
 											<div class="form-group">

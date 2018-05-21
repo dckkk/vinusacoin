@@ -30,7 +30,7 @@
 										<input type="hidden" name="paket_name" value="{{$plans->name}}">
 										<div class="col-md-6">
 											<div class="form-group">
-												<div class="col-md-4"><label for="">Saldo VNC: </label></div> 
+												<div class="col-md-4"><label for="">Balance VNC: </label></div> 
 												<div class="col-md-8 text-right">@if(empty($wallet->total_coin)) 0 @else {{$wallet->total_coin}} @endif VNC</div>
 											</div>
 											<div class="form-group">

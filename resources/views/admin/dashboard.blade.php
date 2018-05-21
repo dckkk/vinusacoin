@@ -17,14 +17,14 @@
 				<div class="col-md-12">
 					<div class="col-md-5">
 						<div class="box-coin">
-							<small>Saldo VNC</small>
+							<small>Balance VNC</small>
 							<br>
 							<p class="pull-right">@if(empty($wallet->total_coin)) 0 @else {{$wallet->total_coin}} @endif VNC</p>							
 						</div>
 					</div>
 					<div class="col-md-5">
 						<div class="box-coin">
-							<small>Saldo ETH</small>
+							<small>Balance ETH</small>
 							<br>
 							<p class="pull-right">@if(empty($wallet->total_eth)) 0 @else {{$wallet->total_eth}} @endif ETH</p>							
 						</div>
@@ -42,7 +42,7 @@
 									<div class="col-md-12">
 										<p style="color:red">Note: You must have minimum 50 VNC !</p>
 										<p class="warn-vnc_eth" style="display:none;color:red;"></p>
-										<div class="col-md-4">Saldo VNC: </div> 
+										<div class="col-md-4">Balance VNC: </div> 
 										<div class="col-md-8 text-right">@if(empty($wallet->total_coin)) 0 @else {{$wallet->total_coin}} @endif VNC</div>
 									</div>
 									<div class="col-md-12">
@@ -72,7 +72,7 @@
 								<div class="panel-body">
 									<div class="col-md-12">
 										<p class="warn-eth_vnc" style="display:none;color:red;"></p>
-										<div class="col-md-4">Saldo ETH: </div> 
+										<div class="col-md-4">Balance ETH: </div> 
 										<div class="col-md-8 text-right">@if(empty($wallet->total_eth)) 0 @else {{$wallet->total_eth}} @endif ETH</div>
 									</div>
 									<div class="col-md-12">

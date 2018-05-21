@@ -23,7 +23,7 @@ function checkVal(event, convert, value, maxValue) {
 function checkConvert(convert, value, maxValue) {
     if (value > maxValue) {
         $('.warn-'+convert).show();
-        $('.warn-'+convert).html("You can't convert/withdraw if your total more than your saldo !");
+        $('.warn-'+convert).html("You can't convert/withdraw if your total more than your balance !");
         $('#'+convert).val("");
     } else {
         $.get('/api/'+convert, function(data){
@@ -55,7 +55,7 @@ function checkConvertDeposit(convert, value, id) {
 function checkPlans(convert, value, maxValue, minDeposit, maxDeposit) {
     if (value > maxValue) {
         $('.warn-'+convert).show();
-        $('.warn-'+convert).html("You can't convert/withdraw if your total more than your saldo !");
+        $('.warn-'+convert).html("You can't convert/withdraw if your total more than your balance !");
         $('#'+convert).val("");
     } else if(value < minDeposit){
         $('.warn-'+convert).html("The minimum deposit of this plan is "+ minDeposit);
