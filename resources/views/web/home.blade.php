@@ -30,6 +30,22 @@
 			</div>
 		</div>
 	</div>
+		<div class="modal fade" tabindex="-1" role="dialog" id="notifModal">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<div class="modal-title">@lang('Notice')</div>
+					</div>
+					@foreach(__('notif') as $key => $value)
+						<div class="modal-body">{!! $value !!}</div>
+					@endforeach
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 	<!-- <div class="row">
 		<div class="col-md-4">
 			<h1><small>Plan Today</small><br>Execute Anytime</h1>
@@ -79,6 +95,10 @@
 		    setTimeout(function() {
 	            $this.addClass('tada').removeClass('hide');
 	        }, i*500);
+		});
+
+		$(window).on('load',function(){
+			$('#notifModal').modal('show');
 		});
 	});
 </script>
